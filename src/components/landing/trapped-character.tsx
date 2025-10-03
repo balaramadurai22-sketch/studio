@@ -12,7 +12,7 @@ export default function TrappedCharacter() {
             <div
               key={i}
               className={cn(
-                "absolute h-10 w-10 rounded-full bg-gradient-to-br from-purple-500 to-teal-400 opacity-80 blur-sm",
+                "absolute h-10 w-10 rounded-full bg-gradient-to-br from-yellow-400 via-yellow-600 to-black opacity-80 blur-sm",
               )}
               style={{
                 animation: `slither 20s linear ${i * -0.1}s infinite`,
