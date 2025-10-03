@@ -65,7 +65,6 @@ export default function ChatInput({ onSend, isStreaming }: ChatInputProps) {
             </TooltipProvider>
             <Button
               size="icon"
-              style={{ backgroundColor: "hsl(var(--accent))", color: "hsl(var(--accent-foreground))" }}
               onClick={handleSend}
               disabled={isStreaming}
             >

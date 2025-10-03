@@ -20,7 +20,7 @@ export default function Hero() {
           </p>
         </div>
         <div className="mt-8 flex justify-center gap-4">
-          <Button size="lg" asChild style={{ backgroundColor: "hsl(var(--accent))", color: "hsl(var(--accent-foreground))" }}>
+          <Button size="lg" asChild>
             <Link href="/chat">Launch Now</Link>
           </Button>
         </div>
