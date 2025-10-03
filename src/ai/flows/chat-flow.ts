@@ -34,9 +34,12 @@ const chatFlow = ai.defineFlow(
 
 
 export async function chat(payload: ChatRequest): Promise<ReadableStream<string>> {
+  const history = [...payload.history];
+  const lastUserMessage = history.pop();
+
   const { stream } = ai.generateStream({
-    prompt: { messages: payload.history },
-    history: payload.history,
+    prompt: lastUserMessage?.content[0]?.text || '',
+    history: history,
     config: {
       topK: 0,
     }
