@@ -9,9 +9,6 @@ import { chat } from "@/ai/flows/chat-flow";
 import { v4 as uuidv4 } from 'uuid';
 import { type ChatRequest } from "@/ai/flows/chat-schema";
 
-// Regular expression to find code blocks and the language
-const codeBlockRegex = /```(\w*)\n([\s\S]*?)```/g;
-
 export default function ChatContainer() {
   const [messages, setMessages] = React.useState<Message[]>([]);
   const [isStreaming, setIsStreaming] = React.useState(false);
@@ -37,25 +34,33 @@ export default function ChatContainer() {
     let assistantResponse = '';
     const assistantMessageId = uuidv4();
 
-    for await (const chunk of stream) {
+    // Add a placeholder for the assistant's message
+    setMessages(prevMessages => [
+      ...prevMessages,
+      {
+        id: assistantMessageId,
+        role: 'assistant',
+        content: '',
+      },
+    ]);
+
+    const reader = stream.getReader();
+    const decoder = new TextDecoder();
+    let done = false;
+
+    while (!done) {
+      const { value, done: readerDone } = await reader.read();
+      done = readerDone;
+      const chunk = decoder.decode(value, { stream: !done });
       assistantResponse += chunk;
-      setMessages(prevMessages => {
-        const lastMessage = prevMessages[prevMessages.length - 1];
-        if (lastMessage && lastMessage.role === 'assistant') {
-          return [
-            ...prevMessages.slice(0, -1),
-            { ...lastMessage, content: assistantResponse },
-          ];
-        }
-        return [
-          ...prevMessages,
-          {
-            id: assistantMessageId,
-            role: 'assistant',
-            content: assistantResponse,
-          },
-        ];
-      });
+      
+      setMessages(prevMessages =>
+        prevMessages.map(msg =>
+          msg.id === assistantMessageId
+            ? { ...msg, content: assistantResponse }
+            : msg
+        )
+      );
     }
 
     setIsStreaming(false);

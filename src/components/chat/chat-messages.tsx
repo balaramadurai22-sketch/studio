@@ -81,7 +81,7 @@ const ChatMessage = ({ message }: { message: Message }) => {
   return (
     <div
       className={cn(
-        "group relative flex items-start gap-4",
+        "group relative flex items-start gap-4 animate-fade-in",
         message.role === "user" && "justify-end"
       )}
     >
@@ -122,15 +122,22 @@ const ChatMessage = ({ message }: { message: Message }) => {
 
 
 export default function ChatMessages({ messages, isStreaming }: { messages: Message[], isStreaming: boolean }) {
+  const scrollAreaRef = React.useRef<HTMLDivElement>(null);
+  const messagesEndRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages, isStreaming]);
+  
   return (
-    <ScrollArea className="flex-1">
+    <ScrollArea className="flex-1" ref={scrollAreaRef}>
       <div className="container py-8">
         <div className="mx-auto max-w-4xl space-y-8">
           {messages.map((message: Message) => (
             <ChatMessage key={message.id} message={message} />
           ))}
            {isStreaming && messages[messages.length - 1]?.role === 'user' && (
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-4 animate-fade-in">
               <Avatar className="h-8 w-8 shrink-0">
                 <div className="flex h-full w-full items-center justify-center rounded-full bg-primary text-primary-foreground">
                   <Bot className="h-5 w-5" />
@@ -142,6 +149,7 @@ export default function ChatMessages({ messages, isStreaming }: { messages: Mess
               </div>
             </div>
           )}
+          <div ref={messagesEndRef} />
         </div>
       </div>
     </ScrollArea>
