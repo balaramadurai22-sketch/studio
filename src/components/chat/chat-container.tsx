@@ -1,6 +1,5 @@
 "use client";
 import * as React from "react";
-import { SidebarInset } from "@/components/ui/sidebar";
 import ChatHeader from "./chat-header";
 import ChatMessages from "./chat-messages";
 import ChatInput from "./chat-input";
@@ -34,7 +33,6 @@ export default function ChatContainer() {
     let assistantResponse = '';
     const assistantMessageId = uuidv4();
 
-    // Add a placeholder for the assistant's message
     setMessages(prevMessages => [
       ...prevMessages,
       {
@@ -70,10 +68,10 @@ export default function ChatContainer() {
   };
 
   return (
-    <SidebarInset className="flex max-h-screen flex-col">
+    <div className="flex flex-1 flex-col">
       <ChatHeader onNewChat={handleNewChat} />
       <ChatMessages messages={messages} isStreaming={isStreaming} />
       <ChatInput onSend={handleSend} isStreaming={isStreaming} />
-    </SidebarInset>
+    </div>
   );
 }

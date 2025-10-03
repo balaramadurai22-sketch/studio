@@ -6,7 +6,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Bot, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ReactMarkdown from "react-markdown";
-import ChatMessageActions from "./chat-message-actions";
 import { Button } from "../ui/button";
 import { Copy, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -81,7 +80,7 @@ const ChatMessage = ({ message }: { message: Message }) => {
   return (
     <div
       className={cn(
-        "group relative flex items-start gap-4 animate-fade-in",
+        "group relative flex items-start gap-3 animate-fade-in py-4",
         message.role === "user" && "justify-end"
       )}
     >
@@ -94,8 +93,10 @@ const ChatMessage = ({ message }: { message: Message }) => {
       )}
       <div
         className={cn(
-          "max-w-[80%] rounded-lg p-4",
-          message.role === "user" ? "bg-primary/10" : "bg-card"
+          "max-w-[80%] rounded-lg p-3",
+          message.role === "user"
+            ? "bg-primary text-primary-foreground"
+            : "bg-card border"
         )}
       >
         <div className="prose prose-sm max-w-none prose-p:leading-normal">
@@ -115,7 +116,6 @@ const ChatMessage = ({ message }: { message: Message }) => {
           </AvatarFallback>
         </Avatar>
       )}
-      <ChatMessageActions role={message.role} />
     </div>
   );
 };
@@ -132,20 +132,19 @@ export default function ChatMessages({ messages, isStreaming }: { messages: Mess
   return (
     <ScrollArea className="flex-1" ref={scrollAreaRef}>
       <div className="container py-8">
-        <div className="mx-auto max-w-4xl space-y-8">
+        <div className="mx-auto max-w-4xl">
           {messages.map((message: Message) => (
             <ChatMessage key={message.id} message={message} />
           ))}
-           {isStreaming && messages[messages.length - 1]?.role === 'user' && (
-            <div className="flex items-start gap-4 animate-fade-in">
+           {isStreaming && (
+            <div className="flex items-start gap-3 animate-fade-in py-4">
               <Avatar className="h-8 w-8 shrink-0">
                 <div className="flex h-full w-full items-center justify-center rounded-full bg-primary text-primary-foreground">
                   <Bot className="h-5 w-5" />
                 </div>
               </Avatar>
               <div className="flex items-center gap-2 rounded-lg bg-card p-4">
-                <Loader2 className="h-5 w-5 animate-spin" />
-                <span className="text-sm text-muted-foreground">Thinking...</span>
+                <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
               </div>
             </div>
           )}
