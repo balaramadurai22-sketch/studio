@@ -25,7 +25,11 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
-export default function ChatHeader() {
+type ChatHeaderProps = {
+  onNewChat: () => void;
+};
+
+export default function ChatHeader({ onNewChat }: ChatHeaderProps) {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
@@ -59,7 +63,7 @@ export default function ChatHeader() {
             <Download className="mr-2 h-4 w-4" />
             Export
           </DropdownMenuItem>
-          <DropdownMenuItem className="text-destructive">
+          <DropdownMenuItem className="text-destructive" onClick={onNewChat}>
             <Trash2 className="mr-2 h-4 w-4" />
             Clear Chat
           </DropdownMenuItem>

@@ -34,6 +34,14 @@ const iconMap: { [key: string]: React.ElementType } = {
 };
 
 export default function ChatSidebar() {
+
+  const handleNewChat = () => {
+    // This logic should be handled in the parent component, 
+    // potentially lifting state up or using a global state manager.
+    // For now, we can just log to the console.
+    console.log("New chat started");
+  };
+
   return (
     <Sidebar>
       <SidebarHeader>
@@ -42,7 +50,7 @@ export default function ChatSidebar() {
           <SidebarTrigger />
         </div>
         <div className="p-2">
-          <SidebarMenuButton className="w-full justify-start">
+          <SidebarMenuButton className="w-full justify-start" onClick={handleNewChat}>
             <PlusCircle />
             <span>New Chat</span>
           </SidebarMenuButton>

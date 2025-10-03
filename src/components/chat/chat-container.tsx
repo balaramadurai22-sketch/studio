@@ -7,6 +7,7 @@ import ChatInput from "./chat-input";
 import { Message, user } from "@/lib/data";
 import { chat } from "@/ai/flows/chat-flow";
 import { v4 as uuidv4 } from 'uuid';
+import { type ChatRequest } from "@/ai/flows/chat-schema";
 
 export default function ChatContainer() {
   const [messages, setMessages] = React.useState<Message[]>([]);
@@ -28,7 +29,7 @@ export default function ChatContainer() {
         role: m.role,
         content: [{ text: m.content }],
       })),
-    });
+    } as ChatRequest);
 
     let assistantResponse = '';
     const assistantMessageId = uuidv4();
@@ -57,9 +58,13 @@ export default function ChatContainer() {
     setIsStreaming(false);
   };
 
+  const handleNewChat = () => {
+    setMessages([]);
+  };
+
   return (
     <SidebarInset className="flex max-h-screen flex-col">
-      <ChatHeader />
+      <ChatHeader onNewChat={handleNewChat} />
       <ChatMessages messages={messages} isStreaming={isStreaming} />
       <ChatInput onSend={handleSend} isStreaming={isStreaming} />
     </SidebarInset>
