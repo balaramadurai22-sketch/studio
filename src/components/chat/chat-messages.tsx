@@ -1,4 +1,5 @@
 "use client";
+import * as React from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { user, type Message } from "@/lib/data";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
