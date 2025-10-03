@@ -9,6 +9,9 @@ import { chat } from "@/ai/flows/chat-flow";
 import { v4 as uuidv4 } from 'uuid';
 import { type ChatRequest } from "@/ai/flows/chat-schema";
 
+// Regular expression to find code blocks and the language
+const codeBlockRegex = /```(\w*)\n([\s\S]*?)```/g;
+
 export default function ChatContainer() {
   const [messages, setMessages] = React.useState<Message[]>([]);
   const [isStreaming, setIsStreaming] = React.useState(false);
