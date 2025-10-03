@@ -1,3 +1,4 @@
+
 "use client";
 import { Button } from "@/components/ui/button";
 import {
@@ -29,9 +30,10 @@ import Logo from "../shared/logo";
 
 type ChatHeaderProps = {
   onNewChat: () => void;
+  title?: string;
 };
 
-export default function ChatHeader({ onNewChat }: ChatHeaderProps) {
+export default function ChatHeader({ onNewChat, title }: ChatHeaderProps) {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
@@ -67,7 +69,7 @@ export default function ChatHeader({ onNewChat }: ChatHeaderProps) {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" className="text-lg font-medium">
-            React component brainstorming
+            <span className="truncate max-w-xs">{title || "New Chat"}</span>
             <ChevronDown className="ml-2 h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
