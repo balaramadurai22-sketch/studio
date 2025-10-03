@@ -21,6 +21,7 @@ import {
   Pin,
   ChevronDown,
   Icon,
+  PlusCircle,
 } from "lucide-react";
 import UserProfile from "./user-profile";
 
@@ -40,7 +41,12 @@ export default function ChatSidebar() {
           <Logo />
           <SidebarTrigger />
         </div>
-        <SidebarInput placeholder="Search..." />
+        <div className="p-2">
+          <SidebarMenuButton className="w-full justify-start">
+            <PlusCircle />
+            <span>New Chat</span>
+          </SidebarMenuButton>
+        </div>
       </SidebarHeader>
 
       <SidebarContent>

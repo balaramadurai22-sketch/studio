@@ -1,4 +1,5 @@
 "use client";
+import * as React from 'react';
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Paperclip, Mic, Send, CornerDownLeft } from "lucide-react";
@@ -6,54 +7,90 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 const promptSuggestions = ["Summarize this", "Explain simply", "Show code example"];
 
-export default function ChatInput() {
+type ChatInputProps = {
+  onSend: (text: string) => void;
+  isStreaming: boolean;
+};
+
+export default function ChatInput({ onSend, isStreaming }: ChatInputProps) {
+  const [text, setText] = React.useState('');
+
+  const handleSend = () => {
+    if (text.trim() && !isStreaming) {
+      onSend(text);
+      setText('');
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSend();
+    }
+  };
+
   return (
     <div className="border-t bg-card p-4">
       <div className="mx-auto max-w-4xl">
         <div className="mb-2 flex gap-2">
-            {promptSuggestions.map(prompt => (
-                <Button key={prompt} variant="outline" size="sm" className="text-muted-foreground">
-                    {prompt}
-                </Button>
-            ))}
+          {promptSuggestions.map(prompt => (
+            <Button
+              key={prompt}
+              variant="outline"
+              size="sm"
+              className="text-muted-foreground"
+              onClick={() => setText(prompt)}
+            >
+              {prompt}
+            </Button>
+          ))}
         </div>
         <div className="relative">
           <Textarea
             placeholder="Type your message here... (Shift+Enter for new line)"
             className="min-h-[60px] w-full resize-none pr-36"
             rows={1}
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            onKeyDown={handleKeyDown}
+            disabled={isStreaming}
           />
           <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
             <TooltipProvider>
-                <Tooltip>
-                    <TooltipTrigger asChild>
-                    <Button variant="ghost" size="icon">
-                        <Paperclip className="h-5 w-5" />
-                    </Button>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>Attach file</p>
-                    </TooltipContent>
-                </Tooltip>
-                <Tooltip>
-                    <TooltipTrigger asChild>
-                    <Button variant="ghost" size="icon">
-                        <Mic className="h-5 w-5" />
-                    </Button>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>Use microphone</p>
-                    </TooltipContent>
-                </Tooltip>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button variant="ghost" size="icon" disabled={isStreaming}>
+                    <Paperclip className="h-5 w-5" />
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Attach file</p>
+                </TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button variant="ghost" size="icon" disabled={isStreaming}>
+                    <Mic className="h-5 w-5" />
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Use microphone</p>
+                </TooltipContent>
+              </Tooltip>
             </TooltipProvider>
-            <Button size="icon" style={{ backgroundColor: "hsl(var(--accent))", color: "hsl(var(--accent-foreground))" }}>
+            <Button
+              size="icon"
+              style={{ backgroundColor: "hsl(var(--accent))", color: "hsl(var(--accent-foreground))" }}
+              onClick={handleSend}
+              disabled={isStreaming}
+            >
               <Send className="h-5 w-5" />
             </Button>
           </div>
         </div>
         <p className="mt-2 text-xs text-muted-foreground flex items-center gap-1">
-            <CornerDownLeft className="h-3 w-3" />
-            Enter to send
+          <CornerDownLeft className="h-3 w-3" />
+          Enter to send
         </p>
       </div>
     </div>

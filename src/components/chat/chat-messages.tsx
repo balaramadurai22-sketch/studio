@@ -1,13 +1,13 @@
 "use client";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { messages, user, type Message } from "@/lib/data";
+import { user, type Message } from "@/lib/data";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Bot, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ReactMarkdown from "react-markdown";
 import ChatMessageActions from "./chat-message-actions";
 import { Button } from "../ui/button";
-import { Copy } from "lucide-react";
+import { Copy, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const CodeBlock = ({ codeString }: { codeString: string }) => {
@@ -35,7 +35,7 @@ const CodeBlock = ({ codeString }: { codeString: string }) => {
   );
 };
 
-export default function ChatMessages() {
+export default function ChatMessages({ messages, isStreaming }: { messages: Message[], isStreaming: boolean }) {
   return (
     <ScrollArea className="flex-1">
       <div className="container py-8">
@@ -79,6 +79,19 @@ export default function ChatMessages() {
               <ChatMessageActions role={message.role} />
             </div>
           ))}
+           {isStreaming && messages[messages.length - 1]?.role === 'user' && (
+            <div className="flex items-start gap-4">
+              <Avatar className="h-8 w-8 shrink-0">
+                <div className="flex h-full w-full items-center justify-center rounded-full bg-primary text-primary-foreground">
+                  <Bot className="h-5 w-5" />
+                </div>
+              </Avatar>
+              <div className="flex items-center gap-2 rounded-lg bg-card p-4">
+                <Loader2 className="h-5 w-5 animate-spin" />
+                <span className="text-sm text-muted-foreground">Thinking...</span>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </ScrollArea>
