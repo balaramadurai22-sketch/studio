@@ -4,11 +4,11 @@ import TrappedCharacter from "./trapped-character";
 
 export default function Hero({ className }: { className?: string }) {
   return (
-    <section className="relative flex min-h-[calc(100vh-4rem)] w-full flex-col items-center justify-center overflow-hidden py-24 text-center md:py-40">
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+    <section className="relative flex min-h-[calc(100vh-4rem)] w-full flex-col items-center justify-center overflow-hidden bg-background py-24 text-center md:py-40">
+      <div className="absolute inset-0 z-0 bg-white"></div>
       <TrappedCharacter />
-      <div className="z-10 flex w-full flex-col items-center justify-center px-4 md:px-8 lg:px-0">
-        <h1 className="font-headline text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl max-w-4xl">
+      <div className="z-10 flex w-full flex-col items-center justify-center px-4 text-center md:px-8 lg:px-0">
+        <h1 className="font-headline text-5xl font-bold tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl max-w-4xl">
           Frontier AI. In Your Hands.
         </h1>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
