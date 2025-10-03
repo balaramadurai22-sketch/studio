@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="py-24 md:py-40">
-      <div className="container text-center">
+    <section className="py-24 md:py-40 text-center">
+      <div className="container">
         <div className="mx-auto max-w-4xl">
           <h1 className="font-headline text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
             Frontier AI. In Your Hands.

@@ -14,24 +14,22 @@ const navLinks = [
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center">
-        <div className="flex items-center gap-10">
-          <Link href="/">
-            <Logo />
-          </Link>
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="hover:text-foreground transition-colors"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </nav>
-        </div>
-        <div className="flex flex-1 items-center justify-end gap-4">
+      <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
+        <Link href="/">
+          <Logo />
+        </Link>
+        <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="hover:text-foreground transition-colors"
+            >
+              {link.name}
+            </Link>
+          ))}
+        </nav>
+        <div className="flex items-center justify-end gap-4">
           <Button variant="outline" asChild>
             <Link href="#">Try the API</Link>
           </Button>
