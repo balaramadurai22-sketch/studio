@@ -6,43 +6,35 @@ export default function TrappedCharacter() {
     <div className="absolute inset-0 z-0 flex items-center justify-center">
       <div className="animate-float-wander">
         <div className="relative h-24 w-24">
-          {/* Body */}
-          <svg
-            viewBox="0 0 100 100"
-            className="h-full w-full"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <radialGradient id="bodyGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                <stop offset="0%" stopColor="rgba(0, 150, 136, 0.8)" />
-                <stop offset="100%" stopColor="rgba(103, 58, 183, 0.9)" />
-              </radialGradient>
-              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="5" result="coloredBlur" />
-                <feMerge>
-                  <feMergeNode in="coloredBlur" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-            </defs>
-            <circle
-              cx="50"
-              cy="50"
-              r="40"
-              fill="url(#bodyGradient)"
-              filter="url(#glow)"
-            />
-          </svg>
+          {/* Human */}
+          <div className="absolute bottom-0 left-1/4 h-12 w-6">
+            <svg
+              viewBox="0 0 30 60"
+              fill="black"
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-full w-full"
+            >
+              <circle cx="15" cy="8" r="7" />
+              <rect x="10" y="18" width="10" height="25" rx="5" />
+              <rect x="5" y="40" width="5" height="20" rx="2.5" />
+              <rect x="20" y="40" width="5" height="20" rx="2.5" />
+            </svg>
+          </div>
 
-          {/* Eyes */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-4">
-            <div className="h-5 w-5 rounded-full bg-white animate-blink origin-center">
-              <div className="h-2 w-2 rounded-full bg-gray-900 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-            </div>
-            <div className="h-5 w-5 rounded-full bg-white animate-blink origin-center" style={{ animationDelay: '0.2s' }}>
-              <div className="h-2 w-2 rounded-full bg-gray-900 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-            </div>
+          {/* Monkey */}
+          <div className="absolute bottom-0 right-1/4 h-10 w-8">
+            <svg
+              viewBox="0 0 40 50"
+              fill="black"
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-full w-full"
+            >
+              <circle cx="20" cy="10" r="8" />
+              <ellipse cx="20" cy="25" rx="12" ry="10" />
+              <rect x="12" y="35" width="6" height="15" rx="3" />
+              <rect x="22" y="35" width="6" height="15" rx="3" />
+              <path d="M5 20 C 0 30, 0 40, 10 40" stroke="black" strokeWidth="4" fill="none" />
+            </svg>
           </div>
         </div>
       </div>
