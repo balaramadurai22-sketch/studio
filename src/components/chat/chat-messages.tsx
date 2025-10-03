@@ -103,7 +103,7 @@ const ChatMessage = ({ message }: { message: Message }) => {
             if (part.type === 'code') {
               return <CodeBlock key={index} lang={part.lang} code={part.content} onCopy={() => onCopy(part.content)} />
             }
-            return <MemoizedReactMarkdown key={index}>{part.content}</MemoizedReactMarkdown>
+            return <MemoizedReactMarkdown key={index} className="text-justify">{part.content}</MemoizedReactMarkdown>
           })}
         </div>
       </div>
