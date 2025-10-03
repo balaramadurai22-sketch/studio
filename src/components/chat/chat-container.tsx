@@ -24,10 +24,12 @@ export default function ChatContainer({ chat, onSend }: ChatContainerProps) {
     // This will now be handled by the parent
   };
 
+  const isLastMessageStreaming = chat?.messages[chat.messages.length - 1]?.stream !== undefined;
+
   return (
     <div className="flex flex-1 flex-col">
       <ChatHeader onNewChat={handleNewChat} title={chat?.title} />
-      <ChatMessages messages={chat?.messages || []} isStreaming={isStreaming} />
+      <ChatMessages messages={chat?.messages || []} isStreaming={isStreaming && isLastMessageStreaming} />
       <ChatInput onSend={handleSend} isStreaming={isStreaming} />
     </div>
   );

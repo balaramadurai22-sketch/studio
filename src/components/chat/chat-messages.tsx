@@ -1,3 +1,4 @@
+
 "use client";
 import * as React from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -9,6 +10,40 @@ import ReactMarkdown from "react-markdown";
 import { Button } from "../ui/button";
 import { Copy, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+
+const useTypewriter = (text: string | ReadableStream<string> | undefined, onDone: () => void) => {
+  const [displayedText, setDisplayedText] = React.useState("");
+  const isStream = text instanceof ReadableStream;
+
+  React.useEffect(() => {
+    if (!text) return;
+    
+    if (isStream) {
+      let currentText = "";
+      const reader = text.getReader();
+      let done = false;
+
+      const read = async () => {
+        while (!done) {
+          const { value, done: readerDone } = await reader.read();
+          done = readerDone;
+          if (value) {
+            currentText += new TextDecoder().decode(value);
+            setDisplayedText(currentText);
+          }
+        }
+        onDone();
+      };
+      read();
+    } else {
+      setDisplayedText(text);
+      onDone();
+    }
+  }, [text, isStream, onDone]);
+
+  return displayedText;
+};
+
 
 const codeBlockRegex = /```(\w*)\n([\s\S]*?)```/g;
 
@@ -47,9 +82,13 @@ const MemoizedReactMarkdown = React.memo(
     prevProps.className === nextProps.className
 );
 
-const ChatMessage = ({ message }: { message: Message }) => {
+const ChatMessage = ({ message, isLastMessage, isStreaming, onStreamingDone }: { message: Message, isLastMessage: boolean, isStreaming: boolean, onStreamingDone: () => void }) => {
   const { toast } = useToast();
-
+  const content = useTypewriter(
+    isLastMessage && isStreaming && message.stream ? message.stream : message.content, 
+    onStreamingDone
+  );
+  
   const onCopy = (code: string) => {
     navigator.clipboard.writeText(code);
     toast({
@@ -61,10 +100,12 @@ const ChatMessage = ({ message }: { message: Message }) => {
   const parts = [];
   let lastIndex = 0;
   let match;
+  
+  const contentToRender = content || message.content;
 
-  while ((match = codeBlockRegex.exec(message.content)) !== null) {
+  while ((match = codeBlockRegex.exec(contentToRender)) !== null) {
     const [fullMatch, lang, code] = match;
-    const textBefore = message.content.slice(lastIndex, match.index);
+    const textBefore = contentToRender.slice(lastIndex, match.index);
     if (textBefore) {
       parts.push({ type: "text", content: textBefore });
     }
@@ -72,7 +113,7 @@ const ChatMessage = ({ message }: { message: Message }) => {
     lastIndex = match.index + fullMatch.length;
   }
 
-  const textAfter = message.content.slice(lastIndex);
+  const textAfter = contentToRender.slice(lastIndex);
   if (textAfter) {
     parts.push({ type: "text", content: textAfter });
   }
@@ -106,6 +147,9 @@ const ChatMessage = ({ message }: { message: Message }) => {
             }
             return <MemoizedReactMarkdown key={index} className="text-justify">{part.content}</MemoizedReactMarkdown>
           })}
+           {isStreaming && isLastMessage && message.role === 'assistant' && contentToRender.length === 0 && (
+              <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+           )}
         </div>
       </div>
       {message.role === "user" && (
@@ -124,30 +168,33 @@ const ChatMessage = ({ message }: { message: Message }) => {
 export default function ChatMessages({ messages, isStreaming }: { messages: Message[], isStreaming: boolean }) {
   const scrollAreaRef = React.useRef<HTMLDivElement>(null);
   const messagesEndRef = React.useRef<HTMLDivElement>(null);
+  const [isTyping, setIsTyping] = React.useState(isStreaming);
+
+  React.useEffect(() => {
+    setIsTyping(isStreaming);
+  }, [isStreaming]);
+
+  const handleStreamingDone = React.useCallback(() => {
+    setIsTyping(false);
+  }, []);
 
   React.useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages, isStreaming]);
+  }, [messages.length, isTyping]);
   
   return (
     <ScrollArea className="flex-1" ref={scrollAreaRef}>
       <div className="container py-8">
         <div className="mx-auto max-w-4xl">
-          {messages.map((message: Message) => (
-            <ChatMessage key={message.id} message={message} />
+          {messages.map((message: Message, index: number) => (
+            <ChatMessage 
+              key={message.id} 
+              message={message}
+              isLastMessage={index === messages.length - 1}
+              isStreaming={isStreaming}
+              onStreamingDone={handleStreamingDone}
+            />
           ))}
-           {isStreaming && (
-            <div className="flex items-start gap-3 animate-fade-in py-4">
-              <Avatar className="h-8 w-8 shrink-0">
-                <div className="flex h-full w-full items-center justify-center rounded-full bg-primary text-primary-foreground">
-                  <Bot className="h-5 w-5" />
-                </div>
-              </Avatar>
-              <div className="flex items-center gap-2 rounded-lg bg-card p-4">
-                <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
-              </div>
-            </div>
-          )}
           <div ref={messagesEndRef} />
         </div>
       </div>

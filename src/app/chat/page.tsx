@@ -51,7 +51,6 @@ export default function ChatPage() {
       })),
     } as ChatRequest);
 
-    let assistantResponse = "";
     const assistantMessageId = uuidv4();
     
     setChats(prevChats => {
@@ -62,35 +61,12 @@ export default function ChatPage() {
         id: assistantMessageId,
         role: 'assistant',
         content: '',
+        stream: stream,
       };
       const finalMessages = [...currentActiveChat.messages, newAssistantMessage];
       const finalChat = {...currentActiveChat, messages: finalMessages};
       return prevChats.map(c => c.id === activeChatId ? finalChat : c);
     });
-
-    const reader = stream.getReader();
-    let done = false;
-
-    while (!done) {
-      const { value, done: readerDone } = await reader.read();
-      done = readerDone;
-      const chunk = value || "";
-      assistantResponse += chunk;
-      
-      setChats(prevChats => {
-        return prevChats.map(c => {
-          if (c.id === activeChatId) {
-            return {
-              ...c,
-              messages: c.messages.map(msg => 
-                msg.id === assistantMessageId ? { ...msg, content: assistantResponse } : msg
-              )
-            };
-          }
-          return c;
-        });
-      });
-    }
   };
   
   React.useEffect(() => {

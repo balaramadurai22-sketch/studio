@@ -14,6 +14,7 @@ export type Message = {
   role: 'user' | 'assistant';
   content: string;
   avatar?: string;
+  stream?: ReadableStream<string>;
 };
 
 export type Chat = {
