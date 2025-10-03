@@ -8,20 +8,20 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 270 95% 99%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
+    --primary: 262 84% 59%;
     --primary-foreground: 0 0% 98%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 174 79% 41%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 240 5.9% 90%;
@@ -109,41 +109,41 @@ body {
 
   @keyframes slither {
     0% {
-      transform: translate(-10vw, 50vh) rotate(-45deg);
+      transform: translate(-20vw, 60vh) rotate(-45deg);
     }
     10% {
-      transform: translate(10vw, 30vh) rotate(0deg);
+      transform: translate(10vw, 40vh) rotate(0deg);
     }
     20% {
-      transform: translate(30vw, 60vh) rotate(45deg);
+      transform: translate(40vw, 70vh) rotate(60deg);
     }
     30% {
-      transform: translate(50vw, 20vh) rotate(-10deg);
+      transform: translate(60vw, 20vh) rotate(-20deg);
     }
     40% {
-      transform: translate(70vw, 70vh) rotate(60deg);
+      transform: translate(80vw, 80vh) rotate(80deg);
     }
     50% {
-      transform: translate(90vw, 40vh) rotate(0deg);
+      transform: translate(100vw, 50vh) rotate(0deg);
     }
     60% {
-      transform: translate(70vw, 10vh) rotate(-60deg);
+      transform: translate(80vw, 10vh) rotate(-80deg);
     }
     70% {
-      transform: translate(50vw, 80vh) rotate(20deg);
+      transform: translate(60vw, 90vh) rotate(20deg);
     }
     80% {
-      transform: translate(30vw, 30vh) rotate(30deg);
+      transform: translate(40vw, 30vh) rotate(45deg);
     }
     90% {
       transform: translate(10vw, 70vh) rotate(-30deg);
     }
     100% {
-      transform: translate(-10vw, 50vh) rotate(-45deg);
+      transform: translate(-20vw, 60vh) rotate(-45deg);
     }
   }
 
   .animate-slither {
-    animation: slither 20s linear infinite;
+    animation: slither 25s linear infinite;
   }
 }

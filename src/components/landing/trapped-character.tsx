@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 
-const SNAKE_LENGTH = 20;
+const SNAKE_LENGTH = 30;
 
 export default function TrappedCharacter() {
   return (
@@ -12,10 +12,10 @@ export default function TrappedCharacter() {
             <div
               key={i}
               className={cn(
-                "absolute h-10 w-10 rounded-full bg-gradient-to-br from-yellow-400 via-yellow-600 to-black opacity-80 blur-sm",
+                "absolute h-12 w-12 rounded-full bg-gradient-to-br from-yellow-400 via-yellow-600 to-black opacity-80 blur-sm shadow-lg shadow-yellow-500/20",
               )}
               style={{
-                animation: `slither 20s linear ${i * -0.1}s infinite`,
+                animation: `slither 25s linear ${i * -0.08}s infinite`,
                 transformOrigin: "center",
               }}
             ></div>
