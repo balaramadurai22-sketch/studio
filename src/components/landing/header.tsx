@@ -15,10 +15,10 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-center">
-        <div className="flex w-full items-center justify-center">
-            <Link href="/" className="mr-auto">
-              <Logo />
-            </Link>
+        <div className="flex w-full items-center justify-between">
+          <Link href="/" className="mr-auto flex items-center">
+            <Logo />
+          </Link>
           <nav className="mx-auto hidden items-center justify-center gap-6 text-sm font-medium text-muted-foreground md:flex">
             {navLinks.map((link) => (
               <Link
@@ -31,7 +31,7 @@ export default function Header() {
             ))}
           </nav>
           <div className="ml-auto flex items-center justify-end gap-4">
-             <Button variant="outline" asChild>
+            <Button variant="outline" asChild>
               <Link href="#">Try the API</Link>
             </Button>
             <Button asChild>
