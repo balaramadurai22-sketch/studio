@@ -14,12 +14,16 @@ const navLinks = [
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-center">
-        <div className="flex w-full items-center justify-between">
-          <Link href="/" className="mr-auto flex items-center">
+      <div className="w-full flex flex-col items-center justify-center px-4 md:px-8 lg:px-0">
+        {/* Header Inner Container */}
+        <div className="flex w-full max-w-screen-2xl items-center justify-center gap-10">
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
             <Logo />
           </Link>
-          <nav className="mx-auto hidden items-center justify-center gap-6 text-sm font-medium text-muted-foreground md:flex">
+
+          {/* Nav Links */}
+          <nav className="hidden md:flex items-center justify-center gap-6 text-sm font-medium text-muted-foreground">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -30,7 +34,9 @@ export default function Header() {
               </Link>
             ))}
           </nav>
-          <div className="ml-auto flex items-center justify-end gap-4">
+
+          {/* Buttons */}
+          <div className="flex items-center justify-center gap-4">
             <Button variant="outline" asChild>
               <Link href="#">Try the API</Link>
             </Button>

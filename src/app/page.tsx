@@ -6,14 +6,19 @@ import Footer from "@/components/landing/footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center bg-background text-foreground">
-      <Header />
-      <main className="flex w-full flex-1 flex-col items-center justify-center">
-        <Hero />
-        <Features />
-        <Testimonials />
+    <div className="flex flex-col min-h-screen w-full bg-background text-foreground">
+      {/* Header */}
+      <Header className="w-full flex justify-center" />
+
+      {/* Main Content */}
+      <main className="flex flex-col w-full flex-1 items-center justify-center text-center">
+        <Hero className="w-full flex justify-center text-center" />
+        <Features className="w-full flex justify-center text-center" />
+        <Testimonials className="w-full flex justify-center text-center" />
       </main>
-      <Footer />
+
+      {/* Footer */}
+      <Footer className="w-full flex justify-center text-center" />
     </div>
   );
 }

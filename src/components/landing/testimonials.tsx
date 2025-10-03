@@ -25,8 +25,9 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="w-full py-20 md:py-32">
-      <div className="container text-center">
+    <section className="w-full py-20 md:py-32 flex justify-center">
+      <div className="w-full max-w-7xl flex flex-col items-center text-center px-4 md:px-8 lg:px-0">
+        {/* Section Header */}
         <div className="mx-auto max-w-2xl">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">
             Loved by Professionals and Teams
@@ -36,13 +37,17 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {/* Testimonials Grid */}
+        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 place-items-center">
           {testimonials.map((testimonial) => {
             const image = PlaceHolderImages.find(
               (img) => img.id === testimonial.id
             );
             return (
-              <Card key={testimonial.id} className="flex flex-col text-center">
+              <Card
+                key={testimonial.id}
+                className="flex flex-col items-center text-center w-full max-w-sm"
+              >
                 <CardHeader>
                   <p className="text-muted-foreground">"{testimonial.quote}"</p>
                 </CardHeader>
@@ -59,9 +64,7 @@ export default function Testimonials() {
                   )}
                   <div>
                     <p className="font-semibold">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">
-                      {testimonial.role}
-                    </p>
+                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                   </div>
                 </CardFooter>
               </Card>
