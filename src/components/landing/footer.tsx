@@ -11,8 +11,8 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t">
-      <div className="container py-12">
+    <footer className="w-full border-t">
+      <div className="container flex items-center justify-center py-12">
         <div className="flex flex-col items-center justify-center gap-8 text-center">
           <div className="flex flex-col items-center gap-4">
             <Logo />

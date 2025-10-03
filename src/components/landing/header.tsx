@@ -15,22 +15,22 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-center">
-        <div className="flex items-center w-full">
+        <div className="flex w-full items-center justify-center">
             <Link href="/" className="mr-auto">
               <Logo />
             </Link>
-          <nav className="hidden md:flex items-center justify-center gap-6 text-sm font-medium text-muted-foreground mx-auto">
+          <nav className="mx-auto hidden items-center justify-center gap-6 text-sm font-medium text-muted-foreground md:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="hover:text-foreground transition-colors"
+                className="transition-colors hover:text-foreground"
               >
                 {link.name}
               </Link>
             ))}
           </nav>
-          <div className="flex items-center justify-end gap-4 ml-auto">
+          <div className="ml-auto flex items-center justify-end gap-4">
              <Button variant="outline" asChild>
               <Link href="#">Try the API</Link>
             </Button>

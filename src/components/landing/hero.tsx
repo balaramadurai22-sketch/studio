@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="py-24 md:py-40 flex items-center justify-center">
+    <section className="flex min-h-[calc(100vh-4rem)] w-full items-center justify-center py-24 md:py-40">
       <div className="container text-center">
         <div className="mx-auto max-w-4xl">
           <h1 className="font-headline text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
