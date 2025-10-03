@@ -54,6 +54,9 @@ export async function chat(payload: ChatRequest): Promise<ReadableStream<string>
         messages: payload.history,
     },
     history: payload.history,
+    config: {
+      topK: 0,
+    }
   });
 
   const textStream = new ReadableStream({
