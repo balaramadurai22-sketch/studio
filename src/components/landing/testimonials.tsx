@@ -42,11 +42,11 @@ export default function Testimonials() {
               (img) => img.id === testimonial.id
             );
             return (
-              <Card key={testimonial.id} className="flex flex-col">
+              <Card key={testimonial.id} className="flex flex-col text-center">
                 <CardHeader>
                   <p className="text-muted-foreground">"{testimonial.quote}"</p>
                 </CardHeader>
-                <CardFooter className="mt-auto flex items-center gap-4">
+                <CardFooter className="mt-auto flex flex-col items-center gap-4">
                   {image && (
                     <Image
                       src={image.imageUrl}

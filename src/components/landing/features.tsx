@@ -38,9 +38,9 @@ export default function Features() {
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (
-            <Card key={feature.title} className="flex flex-col">
+            <Card key={feature.title} className="flex flex-col text-center items-center">
               <CardHeader>
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-primary/10">
+                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-primary/10">
                   {feature.icon}
                 </div>
                 <CardTitle className="font-headline">{feature.title}</CardTitle>

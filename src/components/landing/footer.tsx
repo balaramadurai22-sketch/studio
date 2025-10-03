@@ -13,8 +13,8 @@ export default function Footer() {
   return (
     <footer className="border-t">
       <div className="container py-12">
-        <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
-          <div className="flex flex-col items-center gap-4 md:items-start">
+        <div className="flex flex-col items-center justify-center gap-8 text-center">
+          <div className="flex flex-col items-center gap-4">
             <Logo />
             <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Mistral Next. All rights reserved.
