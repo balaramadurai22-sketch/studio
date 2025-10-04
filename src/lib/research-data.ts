@@ -73,7 +73,7 @@ export const researchProjects: ResearchProject[] = [
     title: "Neural Navigator: Autonomous AI for Unstructured Environments",
     abstract: "Developing a swarm robotics system where AI agents collaboratively map and navigate complex, unknown terrains without prior data.",
     imageId: "research-5",
-g    keyInsights: [
+    keyInsights: [
       "Swarm can map a 10,000 sq ft disaster-simulation area 70% faster than a single agent.",
       "Implemented a decentralized communication protocol with 99.9% uptime in adverse conditions.",
       "AI agents can dynamically adapt their exploration strategy based on environmental feedback.",
