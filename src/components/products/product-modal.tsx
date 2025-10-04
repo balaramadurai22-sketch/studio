@@ -18,13 +18,14 @@ interface ProductModalProps {
 
 const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
+  const Icon = product.Icon;
 
   return (
     <Dialog open={true} onOpenChange={onClose}>
       <DialogContent className="max-w-2xl bg-background text-foreground">
         <DialogHeader className="text-center items-center">
           <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
-            <product.Icon className="h-10 w-10 text-primary" />
+            <Icon className="h-10 w-10 text-primary" />
           </div>
           <DialogTitle className="font-headline text-3xl">
             {product.name}

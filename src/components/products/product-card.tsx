@@ -11,6 +11,7 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
+  const Icon = product.Icon;
   return (
     <Card
       className="flex flex-col items-center text-center w-full bg-card hover:shadow-lg transition-shadow duration-300 cursor-pointer"
@@ -18,7 +19,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
     >
       <CardHeader className="flex flex-col items-center">
         <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-          <product.Icon className="h-8 w-8 text-primary" />
+          <Icon className="h-8 w-8 text-primary" />
         </div>
         <CardTitle className="font-headline text-2xl">
           {product.name}
