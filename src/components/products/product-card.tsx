@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Product } from "@/lib/products-data";
+import { type Product } from "@/lib/products-data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Product } from "@/lib/products-data";
+import { type Product } from "@/lib/products-data";
 import {
   Dialog,
   DialogContent,
