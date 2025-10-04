@@ -11,7 +11,7 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
-  const Icon = product.Icon;
+  const { Icon } = product;
   return (
     <Card
       className="flex flex-col items-center text-center w-full bg-card hover:shadow-lg transition-shadow duration-300 cursor-pointer"

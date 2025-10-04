@@ -18,7 +18,7 @@ interface ProductModalProps {
 
 const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
-  const Icon = product.Icon;
+  const { Icon } = product;
 
   return (
     <Dialog open={true} onOpenChange={onClose}>
