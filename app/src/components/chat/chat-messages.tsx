@@ -137,7 +137,7 @@ const ChatMessage = ({ message, isLastMessage, isStreaming, onStreamingDone }: {
           "max-w-[80%] rounded-lg p-3 prose-p:text-foreground/80",
           message.role === "user"
             ? "bg-primary text-primary-foreground prose-p:text-primary-foreground/90"
-            : "bg-background"
+            : "bg-secondary"
         )}
       >
         <div className="prose prose-sm max-w-none prose-p:leading-normal prose-p:text-inherit">
@@ -180,7 +180,7 @@ export default function ChatMessages({ messages, isStreaming }: { messages: Mess
 
   React.useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages.length, isTyping]);
+  }, [messages.length, isTyping, content]);
   
   return (
     <ScrollArea className="flex-1 bg-background" ref={scrollAreaRef}>

@@ -34,7 +34,10 @@ export default function ChatContainer({
   };
   
   const handleClearChat = () => {
-    // This will now be handled by the parent
+    if (activeChatId) {
+      onDeleteChat(activeChatId)
+      onNewChat()
+    }
   };
 
   const isLastMessageStreaming = chat?.messages[chat.messages.length - 1]?.stream !== undefined;

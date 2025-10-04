@@ -52,13 +52,13 @@ export default function ChatSidebar({ chats, activeChatId, onNewChat, onSwitchCh
 
   return (
     <>
-      <div className={cn("h-screen w-80 flex-col border-r border-border bg-background", isMobile ? "flex" : "hidden md:flex")}>
+      <div className={cn("h-screen w-80 flex-col border-r border-border bg-secondary", isMobile ? "flex" : "hidden md:flex")}>
         <div className="flex h-16 items-center justify-between border-b border-border px-4">
           <Logo />
         </div>
 
         <div className="p-4">
-          <Button variant="outline" className="w-full" onClick={onNewChat}>
+          <Button variant="outline" className="w-full bg-transparent border-muted-foreground hover:bg-muted-foreground/20" onClick={onNewChat}>
             <PlusCircle className="mr-2 h-4 w-4" />
             New Chat
           </Button>
@@ -69,7 +69,7 @@ export default function ChatSidebar({ chats, activeChatId, onNewChat, onSwitchCh
             <div>
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                <Input placeholder="Search chats..." className="pl-9 bg-secondary" />
+                <Input placeholder="Search chats..." className="pl-9 bg-background" />
               </div>
             </div>
             
@@ -80,8 +80,11 @@ export default function ChatSidebar({ chats, activeChatId, onNewChat, onSwitchCh
               {chats.map((chat) => (
                 <div key={chat.id} className="group relative flex items-center">
                   <Button
-                    variant={chat.id === activeChatId ? "secondary" : "ghost"}
-                    className={cn("w-full justify-start pr-8", chat.id === activeChatId && "font-bold")}
+                    variant={chat.id === activeChatId ? "ghost" : "ghost"}
+                    className={cn(
+                        "w-full justify-start pr-8", 
+                        chat.id === activeChatId ? "bg-muted-foreground/20 font-bold" : "hover:bg-muted-foreground/10"
+                    )}
                     onClick={() => onSwitchChat(chat.id)}
                   >
                     <MessageSquare className="mr-2 h-4 w-4" />

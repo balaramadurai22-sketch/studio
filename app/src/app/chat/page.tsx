@@ -85,10 +85,10 @@ export default function ChatPage() {
     if (chats.length === 0) {
       handleNewChat();
     }
-  }, [chats.length]);
+  }, []);
 
   return (
-    <main className="flex h-screen w-full bg-secondary text-foreground">
+    <>
       <ChatSidebar 
         chats={chats} 
         activeChatId={activeChatId}
@@ -105,6 +105,6 @@ export default function ChatPage() {
         onSwitchChat={handleSwitchChat}
         onDeleteChat={handleDeleteChat}
       />
-    </main>
+    </>
   );
 }

@@ -68,7 +68,7 @@ export default function ChatInput({ onSend, isStreaming }: ChatInputProps) {
               variant="default"
               size="icon"
               onClick={handleSend}
-              disabled={isStreaming}
+              disabled={isStreaming || !text.trim()}
             >
               <Send className="h-5 w-5" />
             </Button>
