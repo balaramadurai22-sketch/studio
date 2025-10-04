@@ -105,32 +105,32 @@
     {
       "id": "action-1",
       "description": "Abstract visualization of AI data processing",
-      "imageUrl": "https://images.unsplash.com/photo-1683522653375-32117c768910?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxBSSUyMGRhdGElMjB2aXN1YWxpemF0aW9ufGVufDB8fHx8MTc1OTY0Nzg3NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "AI data"
+      "imageUrl": "https://images.unsplash.com/photo-1597733336794-12d05021d510?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuZXVyYWwlMjBuZXR3b3JrJTIwYmxhY2slMjBhbmQlMjB3aGl0ZXxlbnwwfHx8fDE3NTk4NDY2ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "neural network"
     },
     {
       "id": "action-2",
       "description": "AI generating art in black and white",
-      "imageUrl": "https://images.unsplash.com/photo-1677759300627-99b821422a36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxBSSUyMGFydCUyMGJsYWNrJTIwYW5kJTIwd2hpdGV8ZW58MHx8fHwxNzU5NTg0NTI3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "AI art"
+      "imageUrl": "https://images.unsplash.com/photo-1698241413485-64c6ddd5a0b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxBSSUyMGdlb21ldHJpYyUyMHBhdHRlcm5zJTIwYmxhY2slMjBhbmQlMjB3aGl0ZXxlbnwwfHx8fDE3NTk4NDY3NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI geometric"
     },
     {
       "id": "action-3",
       "description": "Smart automation or robotics concept",
-      "imageUrl": "https://images.unsplash.com/photo-1678493237298-3843b0185994?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxBSSUyMGF1dG9tYXRpb24lMjBibGFjayUyMGFuZCUyMHdoaXRlfGVufDB8fHx8MTc1OTU4NDYwOHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "AI automation"
+      "imageUrl": "https://images.unsplash.com/photo-1581092921434-0d1058f90664?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyb2JvdGljJTIwaGFuZHMlMjBibGFjayUyMGFuZCUyMHdoaXRlfGVufDB8fHx8fDE3NTk4NDY3ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "robotic hands"
     },
     {
       "id": "impact-1",
       "description": "AI in healthcare diagnostics",
-      "imageUrl": "https://images.unsplash.com/photo-1512069511692-b82d787265cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxBSSUyMGhlYWx0aGNhcmV8ZW58MHx8fHwxNzU5NTE3MTA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1678493237298-3843b0185994?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxBSSUyMGhlYWx0aGNhcmUlMjBibGFjayUyMGFuZCUyMHdoaXRlfGVufDB8fHx8fDE3NTk4NDY5NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "AI healthcare"
     },
     {
       "id": "impact-2",
       "description": "AI for climate change modeling",
-      "imageUrl": "https://images.unsplash.com/photo-1718968039323-278255938341?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxBSSUyMGNsaW1hdGUlMjBjaGFuZ2V8ZW58MHx8fHwxNzU5NTg1MDAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "AI climate"
+      "imageUrl": "https://images.unsplash.com/photo-1695425233292-8618d36c2d13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnbG9iZSUyMEFJdCUyMGJsYWNrJTIwYW5kJTIwd2hpdGV8ZW58MHx8fHwxNzU5ODQ3MDAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "globe AI"
     }
   ]
 }

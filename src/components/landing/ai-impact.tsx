@@ -15,7 +15,7 @@ const impactStories = [
   {
     id: "impact-2",
     title: "Accelerating Climate Change Solutions",
-    description: "We're using AI to model complex climate data, helping scientists understand environmental changes and develop effective strategies. From optimizing renewable energy grids to monitoring deforestation, our technology is making a tangible impact.",
+    description: "We're using AI to model complex climate data, helping scientists understand environmental changes and develop effective strategies. From optimizing renewable energy grids to monitoring deforestation, our technology is making a tangible impact on a global scale.",
     imageId: "impact-2",
     link: "#",
   },

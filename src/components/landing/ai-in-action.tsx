@@ -15,19 +15,19 @@ const demos = [
   {
     id: "action-1",
     title: "Live Data Visualization",
-    description: "Watch our AI process and visualize complex data streams in real-time.",
+    description: "Watch our AI process and visualize complex data streams in real-time, revealing hidden patterns.",
     imageId: "action-1",
   },
   {
     id: "action-2",
     title: "Generative Art",
-    description: "See how our models create unique, black-and-white art from simple text prompts.",
+    description: "See how our models create unique, black-and-white art from simple text prompts and geometric shapes.",
     imageId: "action-2",
   },
   {
     id: "action-3",
     title: "Smart Automation",
-    description: "A preview of how our AI can automate and optimize complex workflows.",
+    description: "A preview of how robotic hands and AI can automate and optimize complex digital workflows.",
     imageId: "action-3",
   },
 ];
