@@ -29,6 +29,54 @@
       "description": "User avatar for chat",
       "imageUrl": "https://images.unsplash.com/photo-1521119989659-a83eee488004?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzU5Mzk1Nzc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "person portrait"
+    },
+    {
+      "id": "research-1",
+      "description": "Abstract AI visualization",
+      "imageUrl": "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxBSSUyMGFic3RyYWN0fGVufDB8fHx8MTc1OTUwMzU3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI abstract"
+    },
+    {
+      "id": "research-2",
+      "description": "Neural network visualization",
+      "imageUrl": "https://images.unsplash.com/photo-1597733336794-12d05021d510?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxuZXVyYWwlMjBuZXR3b3JrfGVufDB8fHx8MTc1OTQ3MTUyNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "neural network"
+    },
+    {
+      "id": "research-3",
+      "description": "AI-generated art",
+      "imageUrl": "https://images.unsplash.com/photo-1633311905139-7b6088a69e33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxBSSUyMGFydHxlbnwwfHx8fDE3NTk0NTE1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI art"
+    },
+    {
+      "id": "research-4",
+      "description": "Data analysis graph",
+      "imageUrl": "https://images.unsplash.com/photo-1712904311048-dd345c13a7c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkYXRhJTIwZ3JhcGh8ZW58MHx8fHwxNzU5NTE1NjQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data graph"
+    },
+    {
+      "id": "research-5",
+      "description": "Robotics and AI",
+      "imageUrl": "https://images.unsplash.com/photo-1699602048624-bf6f8d32413f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cm9ib3RpY3MlMjBBSXxlbnwwfHx8fDE3NTk1MTQwNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "robotics AI"
+    },
+    {
+      "id": "research-6",
+      "description": "AI in healthcare",
+      "imageUrl": "https://images.unsplash.com/photo-1512069511692-b82d787265cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxBSSUyMGhlYWx0aGNhcmV8ZW58MHx8fHwxNzU5NTE3MTA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI healthcare"
+    },
+    {
+      "id": "research-7",
+      "description": "Quantum computing concept",
+      "imageUrl": "https://images.unsplash.com/photo-1666112835156-c65bb806ac73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxxdWFudHVtJTIwY29tcHV0aW5nfGVufDB8fHx8MTc1OTQ2NzY2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "quantum computing"
+    },
+    {
+      "id": "research-8",
+      "description": "AI and ethics concept",
+      "imageUrl": "https://images.unsplash.com/photo-1531835415135-698b8d7e0ba4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxBSSUyMGV0aGljc3xlbnwwfHx8fDE3NTk1Njk2NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI ethics"
     }
   ]
 }
