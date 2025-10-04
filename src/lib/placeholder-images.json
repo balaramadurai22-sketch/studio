@@ -3,133 +3,133 @@
     {
       "id": "hero-chat-mockup",
       "description": "Animated mockup of the chat interface",
-      "imageUrl": "https://images.unsplash.com/photo-1725798451557-fc60db3eb6a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjaGF0JTIwaW50ZXJmYWNlfGVufDB8fHx8MTc1OTQwODM2MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1725798451557-fc60db3eb6a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjaGF0JTIwaW50ZXJmYWNlfGVufDB8fHx8MTc1OTUwNDEwNXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chat interface"
     },
     {
       "id": "user-avatar",
       "description": "User avatar for chat",
-      "imageUrl": "https://images.unsplash.com/photo-1521119989659-a83eee488004?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzU5Mzk1Nzc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTk1MDY2MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "person portrait"
     },
     {
       "id": "research-1",
       "description": "Abstract AI visualization",
-      "imageUrl": "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxBSSUyMGFic3RyYWN0fGVufDB8fHx8MTc1OTUwMzU3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1680783954745-3249be59e527?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxBSSUyMGFic3RyYWN0fGVufDB8fHx8MTc1OTUwMzU3MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "AI abstract"
     },
     {
       "id": "research-2",
       "description": "Neural network visualization",
-      "imageUrl": "https://images.unsplash.com/photo-1597733336794-12d05021d510?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxuZXVyYWwlMjBuZXR3b3JrfGVufDB8fHx8MTc1OTQ3MTUyNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1644325349124-d1756b79dd42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxuZXVyYWwlMjBuZXR3b3JrfGVufDB8fHx8MTc1OTQ3MTUyNXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "neural network"
     },
     {
       "id": "research-3",
       "description": "AI-generated art",
-      "imageUrl": "https://images.unsplash.com/photo-1633311905139-7b6088a69e33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxBSSUyMGFydHxlbnwwfHx8fDE3NTk0NTE1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1705249190144-19d7b6d28574?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxBSSUyMGFydHxlbnwwfHx8fDE3NTk0NTE1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "AI art"
     },
     {
       "id": "research-4",
       "description": "Data analysis graph",
-      "imageUrl": "https://images.unsplash.com/photo-1712904311048-dd345c13a7c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkYXRhJTIwZ3JhcGh8ZW58MHx8fHwxNzU5NTE1NjQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1738082956257-06cde4444b1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXRhJTIwZ3JhcGh8ZW58MHx8fHwxNzU5NTE1NjQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "data graph"
     },
     {
       "id": "research-5",
       "description": "Robotics and AI",
-      "imageUrl": "https://images.unsplash.com/photo-1699602048624-bf6f8d32413f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cm9ib3RpY3MlMjBBSXxlbnwwfHx8fDE3NTk1MTQwNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1699602048487-f52024260d3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxyb2JvdGljcyUyMEFJfGVufDB8fHx8MTc1OTUxNDA2OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "robotics AI"
     },
     {
       "id": "research-6",
       "description": "AI in healthcare",
-      "imageUrl": "https://images.unsplash.com/photo-1512069511692-b82d787265cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxBSSUyMGhlYWx0aGNhcmV8ZW58MHx8fHwxNzU5NTE3MTA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1631507623121-eaaba8d4e7dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxBSSUyMGhlYWx0aGNhcmV8ZW58MHx8fHwxNzU5NTE3MTA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "AI healthcare"
     },
     {
       "id": "research-7",
       "description": "Quantum computing concept",
-      "imageUrl": "https://images.unsplash.com/photo-1666112835156-c65bb806ac73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxxdWFudHVtJTIwY29tcHV0aW5nfGVufDB8fHx8MTc1OTQ2NzY2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1609151376730-f246ec0b99e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxxdWFudHVtJTIwY29tcHV0aW5nfGVufDB8fHx8MTc1OTQ2NzY2OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "quantum computing"
     },
     {
       "id": "research-8",
       "description": "AI and ethics concept",
-      "imageUrl": "https://images.unsplash.com/photo-1531835415135-698b8d7e0ba4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxBSSUyMGV0aGljc3xlbnwwfHx8fDE3NTk1Njk2NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1717501218424-b4724c7882bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxBSSUyMGV0aGljc3xlbnwwfHx8fDE3NTk1Njk2NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "AI ethics"
     },
     {
       "id": "founder-bala",
       "description": "Symbol for Bala Ramadurai, the founder.",
-      "imageUrl": "https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxsaW9ufGVufDB8fHx8MTc1OTU3MzEwNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "lion"
     },
     {
       "id": "team-parthiban",
       "description": "Symbol for Parthiban.",
-      "imageUrl": "https://images.unsplash.com/photo-1591823723998-06c85b73a789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0aWdlcnxlbnwwfHx8fDE3NTk1NzMxMDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "tiger"
     },
     {
       "id": "team-arun",
       "description": "Symbol for Arun Kumar.",
-      "imageUrl": "https://images.unsplash.com/photo-1564717469572-962d59647b1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1624958723474-05d32b99005f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2hlZXRhaHxlbnwwfHx8fDE3NTk1NzMxMDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cheetah"
     },
     {
       "id": "team-vijay",
       "description": "Symbol for Vijay K.",
-      "imageUrl": "https://images.unsplash.com/photo-1560264239-7533f8481a5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1607350999170-b893fef057ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b2xmfGVufDB8fHx8MTc1OTU3MzEwNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "wolf"
     },
     {
       "id": "team-dharshan",
       "description": "Symbol for Dharshan.",
-      "imageUrl": "https://images.unsplash.com/photo-1516934404997-6a165682b1c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1593946460607-d1570da6268f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxiZWFyfGVufDB8fHx8MTc1OTU3MzEwNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bear"
     },
     {
       "id": "team-giriraja",
       "description": "Symbol for Giriraja.",
-      "imageUrl": "https://images.unsplash.com/photo-1617936186129-9b555e5f375c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1541793525933-5a16ccd1e0d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyaGlub3xlbnwwfHx8fDE3NTk1NjA2Mjh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "rhino"
     },
     {
       "id": "team-sarathi",
       "description": "Symbol for Sarathi.",
-      "imageUrl": "https://images.unsplash.com/photo-1504994220132-185b306059b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1596465467444-b6e43222e5f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxlYWdsZXxlbnwwfHx8fDE3NTk1NzMxMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "eagle"
     },
     {
       "id": "action-1",
       "description": "Abstract visualization of AI data processing",
-      "imageUrl": "https://images.unsplash.com/photo-1597733336794-12d05021d510?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuZXVyYWwlMjBuZXR3b3JrJTIwYmxhY2slMjBhbmQlMjB3aGl0ZXxlbnwwfHx8fDE3NTk4NDY2ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1545987796-200677ee1011?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuZXVyYWwlMjBuZXR3b3JrfGVufDB8fHx8MTc1OTQ3MTUyNXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "neural network"
     },
     {
       "id": "action-2",
       "description": "AI generating art in black and white",
-      "imageUrl": "https://images.unsplash.com/photo-1698241413485-64c6ddd5a0b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxBSSUyMGdlb21ldHJpYyUyMHBhdHRlcm5zJTIwYmxhY2slMjBhbmQlMjB3aGl0ZXxlbnwwfHx8fDE3NTk4NDY3NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1572566017925-681b69f9aafa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxBSSUyMGdlb21ldHJpY3xlbnwwfHx8fDE3NTk1NzMxMDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "AI geometric"
     },
     {
       "id": "action-3",
       "description": "Smart automation or robotics concept",
-      "imageUrl": "https://images.unsplash.com/photo-1581092921434-0d1058f90664?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyb2JvdGljJTIwaGFuZHMlMjBibGFjayUyMGFuZCUyMHdoaXRlfGVufDB8fHx8fDE3NTk4NDY3ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1728724654223-ae890fc31f1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxyb2JvdGljJTIwaGFuZHN8ZW58MHx8fHwxNzU5NTczMTA0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "robotic hands"
     },
     {
       "id": "impact-1",
       "description": "AI in healthcare diagnostics",
-      "imageUrl": "https://images.unsplash.com/photo-1678493237298-3843b0185994?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxBSSUyMGhlYWx0aGNhcmUlMjBibGFjayUyMGFuZCUyMHdoaXRlfGVufDB8fHx8fDE3NTk4NDY5NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1746842421936-461e16dd8238?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxBSSUyMGhlYWx0aGNhcmV8ZW58MHx8fHwxNzU5NTE3MTA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "AI healthcare"
     },
     {
       "id": "impact-2",
       "description": "AI for climate change modeling",
-      "imageUrl": "https://images.unsplash.com/photo-1695425233292-8618d36c2d13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnbG9iZSUyMEFJdCUyMGJsYWNrJTIwYW5kJTIwd2hpdGV8ZW58MHx8fHwxNzU5ODQ3MDAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1551385917-889e48f92c21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnbG9iZSUyMEFJfGVufDB8fHx8MTc1OTU3MzEwNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "globe AI"
     }
   ]
