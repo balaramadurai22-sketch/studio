@@ -20,12 +20,9 @@ import {
   Download,
   FilePenLine,
   Trash2,
-  Moon,
-  Sun,
   PanelLeft,
   Menu,
 } from "lucide-react";
-import { useEffect, useState } from "react";
 import Logo from "../shared/logo";
 
 type ChatHeaderProps = {
@@ -34,21 +31,6 @@ type ChatHeaderProps = {
 };
 
 export default function ChatHeader({ onNewChat, title }: ChatHeaderProps) {
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("theme") || "light";
-    setTheme(storedTheme);
-    document.documentElement.classList.toggle("dark", storedTheme === "dark");
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
-  };
-
   return (
     <div className="flex h-16 items-center justify-between border-b bg-card px-4">
        <div className="flex items-center gap-2 md:hidden">
@@ -90,11 +72,6 @@ export default function ChatHeader({ onNewChat, title }: ChatHeaderProps) {
       </DropdownMenu>
 
       <div className="flex items-center gap-2">
-        <Button variant="ghost" size="icon" onClick={toggleTheme}>
-          <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon">
