@@ -3,7 +3,6 @@ import Logo from "@/components/shared/logo";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { name: "Products", href: "/products" },
   { name: "Solutions", href: "#" },
   { name: "Research", href: "#" },
   { name: "Resources", href: "#" },
