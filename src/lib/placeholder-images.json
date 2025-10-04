@@ -80,45 +80,45 @@
     },
     {
       "id": "founder-bala",
-      "description": "Portrait of Bala Ramadurai",
-      "imageUrl": "https://images.unsplash.com/photo-1624395213043-fa2e123b2656?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTk0NzE4Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man portrait"
+      "description": "Symbol for Bala Ramadurai, the founder.",
+      "imageUrl": "https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "imageHint": "lion"
     },
     {
       "id": "team-parthiban",
-      "description": "Portrait of Parthiban",
-      "imageUrl": "https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYW4lMjBoZWFkc2hvdHxlbnwwfHx8fDE3NTk1NTM0Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man headshot"
+      "description": "Symbol for Parthiban.",
+      "imageUrl": "https://images.unsplash.com/photo-1591823723998-06c85b73a789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "imageHint": "tiger"
     },
     {
       "id": "team-arun",
-      "description": "Portrait of Arun Kumar",
-      "imageUrl": "https://images.unsplash.com/photo-1557862921-37829c790f19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjBoZWFkc2hvdHxlbnwwfHx8fDE3NTk1NTM0Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man headshot"
+      "description": "Symbol for Arun Kumar.",
+      "imageUrl": "https://images.unsplash.com/photo-1564717469572-962d59647b1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "imageHint": "cheetah"
     },
     {
       "id": "team-vijay",
-      "description": "Portrait of Vijay K",
-      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYW4lMjBoZWFkc2hvdHxlbnwwfHx8fDE3NTk1NTM0Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man headshot"
+      "description": "Symbol for Vijay K.",
+      "imageUrl": "https://images.unsplash.com/photo-1560264239-7533f8481a5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "imageHint": "wolf"
     },
     {
       "id": "team-dharshan",
-      "description": "Portrait of Dharshan",
-      "imageUrl": "https://images.unsplash.com/photo-1588178454780-441fa5b99fa5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYW4lMjBoZWFkc2hvdHxlbnwwfHx8fDE3NTk1NTM0Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man headshot"
+      "description": "Symbol for Dharshan.",
+      "imageUrl": "https://images.unsplash.com/photo-1516934404997-6a165682b1c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "imageHint": "bear"
     },
     {
       "id": "team-giriraja",
-      "description": "Portrait of Giriraja",
-      "imageUrl": "https://images.unsplash.com/photo-1627161684458-a62da52b51c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFuJTIwaGVhZHNob3R8ZW58MHx8fHwxNzU5NTUzNDM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man headshot"
+      "description": "Symbol for Giriraja.",
+      "imageUrl": "https://images.unsplash.com/photo-1617936186129-9b555e5f375c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "imageHint": "rhino"
     },
     {
       "id": "team-sarathi",
-      "description": "Portrait of Sarathi",
-      "imageUrl": "https://images.unsplash.com/photo-1588178454780-441fa5b99fa5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYW4lMjBoZWFkc2hvdHxlbnwwfHx8fDE3NTk1NTM0Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man headshot"
+      "description": "Symbol for Sarathi.",
+      "imageUrl": "https://images.unsplash.com/photo-1504994220132-185b306059b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "imageHint": "eagle"
     }
   ]
 }

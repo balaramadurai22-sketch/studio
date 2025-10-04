@@ -5,16 +5,14 @@ import type { CompanyInitiative } from "@/lib/company-data";
 
 type InitiativeCardProps = {
   initiative: CompanyInitiative;
-  onClick: () => void;
 };
 
-export default function InitiativeCard({ initiative, onClick }: InitiativeCardProps) {
+export default function InitiativeCard({ initiative }: InitiativeCardProps) {
   const { Icon } = initiative;
 
   return (
     <Card
-      className="group flex cursor-pointer flex-col overflow-hidden text-center transition-all duration-300 ease-in-out hover:bg-foreground hover:text-background border-foreground hover:shadow-2xl"
-      onClick={onClick}
+      className="group flex cursor-pointer flex-col h-full overflow-hidden text-center transition-all duration-300 ease-in-out hover:bg-foreground hover:text-background border-foreground hover:shadow-2xl"
     >
       <CardHeader className="flex flex-col items-center p-6">
         <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-transparent border-2 border-foreground group-hover:border-background transition-colors duration-300">

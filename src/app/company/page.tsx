@@ -4,26 +4,13 @@ import * as React from "react";
 import Header from "@/components/landing/header";
 import Footer from "@/components/landing/footer";
 import { companyInitiatives, teamMembers, type CompanyInitiative } from "@/lib/company-data";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import InitiativeCard from "@/components/company/initiative-card";
 import TeamMemberCard from "@/components/company/team-member-card";
-import InitiativeModal from "@/components/company/initiative-modal";
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function CompanyPage() {
-  const [selectedInitiative, setSelectedInitiative] = React.useState<CompanyInitiative | null>(null);
-  const [isModalOpen, setIsModalOpen] = React.useState(false);
-
-  const handleInitiativeClick = (initiative: CompanyInitiative) => {
-    setSelectedInitiative(initiative);
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedInitiative(null);
-  };
-
   const founder = teamMembers.find(m => m.id === 'founder-bala');
   const coreTeam = teamMembers.filter(m => m.id !== 'founder-bala');
 
@@ -54,7 +41,7 @@ export default function CompanyPage() {
               <TeamMemberCard member={founder} isFounder />
             </div>
           )}
-          <div className="mt-16 grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-3 lg:grid-cols-6">
+          <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
             {coreTeam.map((member) => (
               <TeamMemberCard key={member.id} member={member} />
             ))}
@@ -65,27 +52,19 @@ export default function CompanyPage() {
 
         {/* Initiatives Section */}
         <section className="container mx-auto py-20 text-center">
-          <h2 className="font-headline text-4xl font-bold">Our Initiatives</h2>
+          <h2 className="font-headline text-4xl font-bold">Our Core Initiatives</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
             Explore the divisions and projects driving the future of AI.
           </p>
           <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {companyInitiatives.map((initiative) => (
-              <InitiativeCard
-                key={initiative.id}
-                initiative={initiative}
-                onClick={() => handleInitiativeClick(initiative)}
-              />
+              <Link href={`/company/${initiative.id}`} key={initiative.id}>
+                  <InitiativeCard initiative={initiative} />
+              </Link>
             ))}
           </div>
         </section>
       </main>
-
-      <InitiativeModal
-        initiative={selectedInitiative}
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-      />
       <Footer />
     </div>
   );
