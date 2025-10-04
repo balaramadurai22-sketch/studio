@@ -77,6 +77,48 @@
       "description": "AI and ethics concept",
       "imageUrl": "https://images.unsplash.com/photo-1531835415135-698b8d7e0ba4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxBSSUyMGV0aGljc3xlbnwwfHx8fDE3NTk1Njk2NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "AI ethics"
+    },
+    {
+      "id": "founder-bala",
+      "description": "Portrait of Bala Ramadurai",
+      "imageUrl": "https://images.unsplash.com/photo-1624395213043-fa2e123b2656?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTk0NzE4Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "team-parthiban",
+      "description": "Portrait of Parthiban",
+      "imageUrl": "https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYW4lMjBoZWFkc2hvdHxlbnwwfHx8fDE3NTk1NTM0Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man headshot"
+    },
+    {
+      "id": "team-arun",
+      "description": "Portrait of Arun Kumar",
+      "imageUrl": "https://images.unsplash.com/photo-1557862921-37829c790f19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjBoZWFkc2hvdHxlbnwwfHx8fDE3NTk1NTM0Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man headshot"
+    },
+    {
+      "id": "team-vijay",
+      "description": "Portrait of Vijay K",
+      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYW4lMjBoZWFkc2hvdHxlbnwwfHx8fDE3NTk1NTM0Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man headshot"
+    },
+    {
+      "id": "team-dharshan",
+      "description": "Portrait of Dharshan",
+      "imageUrl": "https://images.unsplash.com/photo-1588178454780-441fa5b99fa5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYW4lMjBoZWFkc2hvdHxlbnwwfHx8fDE3NTk1NTM0Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man headshot"
+    },
+    {
+      "id": "team-giriraja",
+      "description": "Portrait of Giriraja",
+      "imageUrl": "https://images.unsplash.com/photo-1627161684458-a62da52b51c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFuJTIwaGVhZHNob3R8ZW58MHx8fHwxNzU5NTUzNDM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man headshot"
+    },
+    {
+      "id": "team-sarathi",
+      "description": "Portrait of Sarathi",
+      "imageUrl": "https://images.unsplash.com/photo-1588178454780-441fa5b99fa5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYW4lMjBoZWFkc2hvdHxlbnwwfHx8fDE3NTk1NTM0Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man headshot"
     }
   ]
 }
