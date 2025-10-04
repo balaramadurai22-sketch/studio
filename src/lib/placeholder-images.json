@@ -135,37 +135,37 @@
     {
       "id": "blog-1",
       "description": "Abstract art representing prompt engineering",
-      "imageUrl": "https://images.unsplash.com/photo-1685478237496-d4e545f1e343?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMGFydHxlbnwwfHx8fDE3NjAwNzcyNTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1691587312338-e60f7198a287?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "abstract art"
     },
     {
       "id": "blog-2",
       "description": "DNA strand for drug discovery blog",
-      "imageUrl": "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxETkElMjBzdHJhbmR8ZW58MHx8fHwxNzYwMDc3MjUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1694832521193-a6021570bce7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "dna strand"
     },
     {
       "id": "blog-3",
       "description": "Balanced scales for ethics blog",
-      "imageUrl": "https://images.unsplash.com/photo-1599334399772-1b6a19a95b87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiYWxhbmNlZCUyMHNjYWxlc3xlbnwwfHx8fDE3NjAwNzcyNTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1683122329375-d14d3a076764?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "balanced scales"
     },
     {
       "id": "blog-4",
       "description": "Paint brushes for generative art blog",
-      "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYWludCUyMGJydXNoZXN8ZW58MHx8fHwxNzYwMDc3MjUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "paint brushes"
     },
     {
       "id": "blog-5",
       "description": "Forest canopy for climate change blog",
-      "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb3Jlc3QlMjBjYW5vcHl8ZW58MHx8fHwxNzYwMDc3MjUzfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1704192131972-e137123616b7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "forest canopy"
     },
     {
       "id": "blog-6",
       "description": "City skyline for future of work blog",
-      "imageUrl": "https://images.unsplash.com/photo-1444703686981-a3abbc4d42e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaXR5JTIwc2t5bGluZXxlbnwwfHx8fDE3NjAwNzcyNTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1701334005186-b4eb34552b2b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "city skyline"
     }
   ]
