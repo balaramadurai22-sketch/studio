@@ -1,24 +1,28 @@
 import Header from "@/components/landing/header";
 import Hero from "@/components/landing/hero";
-import Features from "@/components/landing/features";
-import Testimonials from "@/components/landing/testimonials";
+import AiInAction from "@/components/landing/ai-in-action";
+import InnovationHub from "@/components/landing/innovation-hub";
+import AiImpact from "@/components/landing/ai-impact";
+import JoinCommunity from "@/components/landing/join-community";
 import Footer from "@/components/landing/footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen w-full bg-background text-foreground">
+    <div className="flex min-h-screen w-full flex-col bg-background text-foreground">
       {/* Header */}
-      <Header className="w-full flex justify-center" />
+      <Header />
 
       {/* Main Content */}
-      <main className="flex flex-col w-full flex-1 items-center justify-center text-center">
-        <Hero className="w-full flex justify-center text-center" />
-        <Features className="w-full flex justify-center text-center" />
-        <Testimonials className="w-full flex justify-center text-center" />
+      <main className="flex w-full flex-1 flex-col items-center justify-center text-center">
+        <Hero />
+        <AiInAction />
+        <InnovationHub />
+        <AiImpact />
+        <JoinCommunity />
       </main>
 
       {/* Footer */}
-      <Footer className="w-full flex justify-center text-center" />
+      <Footer />
     </div>
   );
 }
