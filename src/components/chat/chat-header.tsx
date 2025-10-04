@@ -24,26 +24,55 @@ import {
   Menu,
 } from "lucide-react";
 import Logo from "../shared/logo";
+import ChatSidebar from "./sidebar";
+import { type Chat } from "@/lib/data";
+import * as React from "react";
 
 type ChatHeaderProps = {
   onNewChat: () => void;
   title?: string;
+  isSidebarOpen?: boolean;
+  onToggleSidebar?: () => void;
+  chats: Chat[];
+  activeChatId: string | null;
+  onSwitchChat: (chatId: string) => void;
+  onDeleteChat: (chatId: string) => void;
 };
 
-export default function ChatHeader({ onNewChat, title }: ChatHeaderProps) {
+export default function ChatHeader({ 
+    onNewChat, 
+    title,
+    chats,
+    activeChatId,
+    onSwitchChat,
+    onDeleteChat
+}: ChatHeaderProps) {
+    const [isMobileSidebarOpen, setIsMobileSidebarOpen] = React.useState(false);
+
   return (
     <div className="flex h-16 items-center justify-between border-b bg-card px-4">
        <div className="flex items-center gap-2 md:hidden">
-        <Sheet>
+        <Sheet open={isMobileSidebarOpen} onOpenChange={setIsMobileSidebarOpen}>
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon">
               <Menu className="h-5 w-5" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="left">
-            <div className="p-4">
-              <Logo />
-            </div>
+          <SheetContent side="left" className="w-80 p-0">
+             <ChatSidebar
+                chats={chats}
+                activeChatId={activeChatId}
+                onNewChat={() => {
+                    onNewChat();
+                    setIsMobileSidebarOpen(false);
+                }}
+                onSwitchChat={(id) => {
+                    onSwitchChat(id);
+                    setIsMobileSidebarOpen(false);
+                }}
+                onDeleteChat={onDeleteChat}
+                isMobile
+            />
           </SheetContent>
         </Sheet>
       </div>

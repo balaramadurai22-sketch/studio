@@ -9,9 +9,22 @@ import { type Chat } from "@/lib/data";
 type ChatContainerProps = {
   chat: Chat | null;
   onSend: (text: string) => void;
+  chats: Chat[];
+  activeChatId: string | null;
+  onNewChat: () => void;
+  onSwitchChat: (id: string) => void;
+  onDeleteChat: (id: string) => void;
 };
 
-export default function ChatContainer({ chat, onSend }: ChatContainerProps) {
+export default function ChatContainer({ 
+    chat, 
+    onSend,
+    chats,
+    activeChatId,
+    onNewChat,
+    onSwitchChat,
+    onDeleteChat
+}: ChatContainerProps) {
   const [isStreaming, setIsStreaming] = React.useState(false);
 
   const handleSend = async (text: string) => {
@@ -20,7 +33,7 @@ export default function ChatContainer({ chat, onSend }: ChatContainerProps) {
     setIsStreaming(false);
   };
   
-  const handleNewChat = () => {
+  const handleClearChat = () => {
     // This will now be handled by the parent
   };
 
@@ -28,7 +41,14 @@ export default function ChatContainer({ chat, onSend }: ChatContainerProps) {
 
   return (
     <div className="flex flex-1 flex-col">
-      <ChatHeader onNewChat={handleNewChat} title={chat?.title} />
+      <ChatHeader 
+        onNewChat={handleClearChat} 
+        title={chat?.title}
+        chats={chats}
+        activeChatId={activeChatId}
+        onSwitchChat={onSwitchChat}
+        onDeleteChat={onDeleteChat}
+       />
       <ChatMessages messages={chat?.messages || []} isStreaming={isStreaming && isLastMessageStreaming} />
       <ChatInput onSend={handleSend} isStreaming={isStreaming} />
     </div>

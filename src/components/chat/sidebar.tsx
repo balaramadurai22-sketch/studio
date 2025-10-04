@@ -35,9 +35,10 @@ type ChatSidebarProps = {
   onNewChat: () => void;
   onSwitchChat: (chatId: string) => void;
   onDeleteChat: (chatId: string) => void;
+  isMobile?: boolean;
 };
 
-export default function ChatSidebar({ chats, activeChatId, onNewChat, onSwitchChat, onDeleteChat }: ChatSidebarProps) {
+export default function ChatSidebar({ chats, activeChatId, onNewChat, onSwitchChat, onDeleteChat, isMobile }: ChatSidebarProps) {
   const [isBugReportOpen, setIsBugReportOpen] = React.useState(false);
   const [isFeatureRequestOpen, setIsFeatureRequestOpen] = React.useState(false);
   const [chatToDelete, setChatToDelete] = React.useState<string | null>(null);
@@ -51,7 +52,7 @@ export default function ChatSidebar({ chats, activeChatId, onNewChat, onSwitchCh
 
   return (
     <>
-      <div className="hidden h-screen w-80 flex-col border-r bg-background md:flex">
+      <div className={cn("h-screen w-80 flex-col border-r bg-background", isMobile ? "flex" : "hidden md:flex")}>
         <div className="flex h-16 items-center justify-between border-b px-4">
           <Logo />
         </div>

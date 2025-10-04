@@ -22,7 +22,7 @@ export default function ChatPage() {
       title: "New Chat",
       messages: [],
     };
-    setChats((prev) => [...prev, newChat]);
+    setChats((prev) => [newChat, ...prev]);
     setActiveChatId(newChat.id);
   };
 
@@ -31,11 +31,11 @@ export default function ChatPage() {
   };
 
   const handleDeleteChat = (chatId: string) => {
-    setChats(prev => prev.filter(c => c.id !== chatId));
+    const updatedChats = chats.filter(c => c.id !== chatId);
+    setChats(updatedChats);
     if (activeChatId === chatId) {
-        const remainingChats = chats.filter(c => c.id !== chatId);
-        if (remainingChats.length > 0) {
-            setActiveChatId(remainingChats[0].id);
+        if (updatedChats.length > 0) {
+            setActiveChatId(updatedChats[0].id);
         } else {
             handleNewChat();
         }
@@ -99,6 +99,11 @@ export default function ChatPage() {
       <ChatContainer
         chat={activeChat}
         onSend={handleSendMessage}
+        chats={chats}
+        activeChatId={activeChatId}
+        onNewChat={handleNewChat}
+        onSwitchChat={handleSwitchChat}
+        onDeleteChat={handleDeleteChat}
       />
     </>
   );

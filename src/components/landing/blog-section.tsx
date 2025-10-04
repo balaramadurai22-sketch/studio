@@ -29,7 +29,7 @@ export default function BlogSection() {
         </div>
 
         {/* Scrollable Posts */}
-        <div className="w-full max-w-6xl">
+        <div className="w-full max-w-6xl px-4 sm:px-0">
             <BlogCarousel />
         </div>
 

@@ -10,11 +10,8 @@ import BlogSection from "@/components/landing/blog-section";
 export default function Home() {
   return (
     <div className="flex min-h-screen w-full flex-col bg-background text-foreground">
-      {/* Header */}
       <Header />
-
-      {/* Main Content */}
-      <main className="flex w-full flex-1 flex-col items-center justify-center text-center">
+      <main className="flex-1">
         <Hero />
         <AiInAction />
         <InnovationHub />
@@ -22,8 +19,6 @@ export default function Home() {
         <AiImpact />
         <JoinCommunity />
       </main>
-
-      {/* Footer */}
       <Footer />
     </div>
   );
