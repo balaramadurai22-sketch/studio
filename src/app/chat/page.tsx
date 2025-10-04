@@ -30,6 +30,18 @@ export default function ChatPage() {
     setActiveChatId(chatId);
   };
 
+  const handleDeleteChat = (chatId: string) => {
+    setChats(prev => prev.filter(c => c.id !== chatId));
+    if (activeChatId === chatId) {
+        const remainingChats = chats.filter(c => c.id !== chatId);
+        if (remainingChats.length > 0) {
+            setActiveChatId(remainingChats[0].id);
+        } else {
+            handleNewChat();
+        }
+    }
+  };
+
   const handleSendMessage = async (text: string) => {
     if (!activeChat) return;
 
@@ -82,6 +94,7 @@ export default function ChatPage() {
         activeChatId={activeChatId}
         onNewChat={handleNewChat}
         onSwitchChat={handleSwitchChat}
+        onDeleteChat={handleDeleteChat}
       />
       <ChatContainer
         chat={activeChat}

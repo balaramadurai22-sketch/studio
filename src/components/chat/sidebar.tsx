@@ -1,7 +1,7 @@
 
 "use client";
 import * as React from "react";
-import { MessageSquare, Pin, PlusCircle, Search, Bug, Lightbulb } from "lucide-react";
+import { MessageSquare, PlusCircle, Search, Bug, Lightbulb, MoreHorizontal, FileText, Share2, Trash2 } from "lucide-react";
 import UserProfile from "./user-profile";
 import { Button } from "../ui/button";
 import { type Chat } from "@/lib/data";
@@ -12,18 +12,43 @@ import { cn } from "@/lib/utils";
 import BugReportForm from "./bug-report-form";
 import FeatureRequestForm from "./feature-request-form";
 import { Separator } from "../ui/separator";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog"
 
 type ChatSidebarProps = {
   chats: Chat[];
   activeChatId: string | null;
   onNewChat: () => void;
   onSwitchChat: (chatId: string) => void;
+  onDeleteChat: (chatId: string) => void;
 };
 
-export default function ChatSidebar({ chats, activeChatId, onNewChat, onSwitchChat }: ChatSidebarProps) {
+export default function ChatSidebar({ chats, activeChatId, onNewChat, onSwitchChat, onDeleteChat }: ChatSidebarProps) {
   const [isBugReportOpen, setIsBugReportOpen] = React.useState(false);
   const [isFeatureRequestOpen, setIsFeatureRequestOpen] = React.useState(false);
-  
+  const [chatToDelete, setChatToDelete] = React.useState<string | null>(null);
+
+  const handleDeleteConfirm = () => {
+    if (chatToDelete) {
+      onDeleteChat(chatToDelete);
+      setChatToDelete(null);
+    }
+  };
+
   return (
     <>
       <div className="hidden h-screen w-80 flex-col border-r bg-background md:flex">
@@ -52,15 +77,40 @@ export default function ChatSidebar({ chats, activeChatId, onNewChat, onSwitchCh
                 Chat History
               </h3>
               {chats.map((chat) => (
-                <Button
-                  key={chat.id}
-                  variant={chat.id === activeChatId ? "secondary" : "ghost"}
-                  className={cn("w-full justify-start", chat.id === activeChatId && "font-bold")}
-                  onClick={() => onSwitchChat(chat.id)}
-                >
-                  <MessageSquare className="mr-2 h-4 w-4" />
-                  <span className="truncate flex-1 text-left">{chat.title}</span>
-                </Button>
+                <div key={chat.id} className="group relative flex items-center">
+                  <Button
+                    variant={chat.id === activeChatId ? "secondary" : "ghost"}
+                    className={cn("w-full justify-start pr-8", chat.id === activeChatId && "font-bold")}
+                    onClick={() => onSwitchChat(chat.id)}
+                  >
+                    <MessageSquare className="mr-2 h-4 w-4" />
+                    <span className="truncate flex-1 text-left">{chat.title}</span>
+                  </Button>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" size="icon" className="absolute right-1 h-7 w-7 opacity-0 group-hover:opacity-100">
+                        <MoreHorizontal className="h-4 w-4" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                      <DropdownMenuItem>
+                        <FileText className="mr-2 h-4 w-4" />
+                        Export (Word)
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        <Share2 className="mr-2 h-4 w-4" />
+                        Share
+                      </DropdownMenuItem>
+                      <DropdownMenuItem
+                        className="text-destructive"
+                        onClick={() => setChatToDelete(chat.id)}
+                      >
+                        <Trash2 className="mr-2 h-4 w-4" />
+                        Delete
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
               ))}
             </div>
           </div>
@@ -79,6 +129,24 @@ export default function ChatSidebar({ chats, activeChatId, onNewChat, onSwitchCh
           <UserProfile />
         </div>
       </div>
+
+      <AlertDialog open={!!chatToDelete} onOpenChange={(open) => !open && setChatToDelete(null)}>
+        <AlertDialogContent>
+            <AlertDialogHeader>
+                <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                <AlertDialogDescription>
+                    This action cannot be undone. This will permanently delete this chat history.
+                </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+                <AlertDialogCancel onClick={() => setChatToDelete(null)}>Cancel</AlertDialogCancel>
+                <AlertDialogAction onClick={handleDeleteConfirm} className="bg-destructive text-destructive-foreground hover:bg-destructive/90">
+                    Delete
+                </AlertDialogAction>
+            </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
       <BugReportForm 
         isOpen={isBugReportOpen}
         onClose={() => setIsBugReportOpen(false)}
