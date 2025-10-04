@@ -5,6 +5,7 @@ import InnovationHub from "@/components/landing/innovation-hub";
 import AiImpact from "@/components/landing/ai-impact";
 import JoinCommunity from "@/components/landing/join-community";
 import Footer from "@/components/landing/footer";
+import BlogSection from "@/components/landing/blog-section";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <AiInAction />
         <InnovationHub />
+        <BlogSection />
         <AiImpact />
         <JoinCommunity />
       </main>
