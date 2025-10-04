@@ -134,39 +134,39 @@
     },
     {
       "id": "blog-1",
-      "description": "Abstract art representing prompt engineering",
-      "imageUrl": "https://images.unsplash.com/photo-1691587312338-e60f7198a287?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "imageHint": "abstract art"
+      "description": "Black and white sketch representing prompt engineering",
+      "imageUrl": "https://images.unsplash.com/photo-1582195224076-5797361b3692?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "abstract sketch"
     },
     {
       "id": "blog-2",
-      "description": "DNA strand for drug discovery blog",
-      "imageUrl": "https://images.unsplash.com/photo-1694832521193-a6021570bce7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "imageHint": "dna strand"
+      "description": "Black and white sketch of a DNA strand",
+      "imageUrl": "https://images.unsplash.com/photo-1614926120199-3b5643440751?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "dna sketch"
     },
     {
       "id": "blog-3",
-      "description": "Balanced scales for ethics blog",
-      "imageUrl": "https://images.unsplash.com/photo-1683122329375-d14d3a076764?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "imageHint": "balanced scales"
+      "description": "Black and white sketch of balanced scales for ethics",
+      "imageUrl": "https://images.unsplash.com/photo-1555685812-4b94d83763f5?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "scales sketch"
     },
     {
       "id": "blog-4",
-      "description": "Paint brushes for generative art blog",
-      "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "imageHint": "paint brushes"
+      "description": "Black and white sketch of paint brushes for generative art",
+      "imageUrl": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1945&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "art sketch"
     },
     {
       "id": "blog-5",
-      "description": "Forest canopy for climate change blog",
-      "imageUrl": "https://images.unsplash.com/photo-1704192131972-e137123616b7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "imageHint": "forest canopy"
+      "description": "Black and white sketch of a forest canopy for climate change",
+      "imageUrl": "https://images.unsplash.com/photo-1542886799-c6c3fe08287c?q=80&w=1885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "forest sketch"
     },
     {
       "id": "blog-6",
-      "description": "City skyline for future of work blog",
-      "imageUrl": "https://images.unsplash.com/photo-1701334005186-b4eb34552b2b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "imageHint": "city skyline"
+      "description": "Black and white sketch of a city skyline for future of work",
+      "imageUrl": "https://images.unsplash.com/photo-1522093024179-8b07545d454a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "city sketch"
     }
   ]
 }
