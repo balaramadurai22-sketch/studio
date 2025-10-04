@@ -24,10 +24,19 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
   description: z.string().min(1, "Description is required"),
+  useCase: z.string().min(1, "Use case is required"),
+  priority: z.enum(["nice-to-have", "important", "critical"]).optional(),
 });
 
 type FeatureRequestFormProps = {
@@ -42,6 +51,8 @@ export default function FeatureRequestForm({ isOpen, onClose }: FeatureRequestFo
     defaultValues: {
       title: "",
       description: "",
+      useCase: "",
+      priority: "important",
     },
   });
 
@@ -49,7 +60,7 @@ export default function FeatureRequestForm({ isOpen, onClose }: FeatureRequestFo
     console.log("Feature Request Submitted:", values);
     toast({
       title: "Feature Request Submitted",
-      description: "Thank you for your suggestion!",
+      description: "Thank you for your suggestion! We'll consider it for future updates.",
     });
     form.reset();
     onClose();
@@ -57,7 +68,7 @@ export default function FeatureRequestForm({ isOpen, onClose }: FeatureRequestFo
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent>
+      <DialogContent className="sm:max-w-[480px]">
         <DialogHeader>
           <DialogTitle>Request a New Feature</DialogTitle>
           <DialogDescription>
@@ -87,10 +98,48 @@ export default function FeatureRequestForm({ isOpen, onClose }: FeatureRequestFo
                   <FormLabel>Description</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Please describe the feature and its benefits..."
+                      placeholder="Describe the feature and how it should work..."
                       {...field}
                     />
                   </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="useCase"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Use Case / Benefit</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="How would this feature help you or other users?"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="priority"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Priority Level (Optional)</FormLabel>
+                   <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select a priority level" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="nice-to-have">Nice to Have</SelectItem>
+                      <SelectItem value="important">Important</SelectItem>
+                      <SelectItem value="critical">Critical</SelectItem>
+                    </SelectContent>
+                  </Select>
                   <FormMessage />
                 </FormItem>
               )}
@@ -99,7 +148,7 @@ export default function FeatureRequestForm({ isOpen, onClose }: FeatureRequestFo
               <Button type="button" variant="ghost" onClick={onClose}>
                 Cancel
               </Button>
-              <Button type="submit">Submit</Button>
+              <Button type="submit">Submit Request</Button>
             </DialogFooter>
           </form>
         </Form>

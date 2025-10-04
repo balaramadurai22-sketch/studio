@@ -16,6 +16,7 @@ import {
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -24,10 +25,20 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
   description: z.string().min(1, "Description is required"),
+  stepsToReproduce: z.string().min(1, "Steps to reproduce are required"),
+  severity: z.enum(["low", "medium", "high"]),
+  attachment: z.any().optional(),
 });
 
 type BugReportFormProps = {
@@ -42,6 +53,8 @@ export default function BugReportForm({ isOpen, onClose }: BugReportFormProps) {
     defaultValues: {
       title: "",
       description: "",
+      stepsToReproduce: "",
+      severity: "medium",
     },
   });
 
@@ -49,7 +62,7 @@ export default function BugReportForm({ isOpen, onClose }: BugReportFormProps) {
     console.log("Bug Report Submitted:", values);
     toast({
       title: "Bug Report Submitted",
-      description: "Thank you for your feedback!",
+      description: "Thank you for your feedback! We'll look into this issue.",
     });
     form.reset();
     onClose();
@@ -57,7 +70,7 @@ export default function BugReportForm({ isOpen, onClose }: BugReportFormProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent>
+      <DialogContent className="sm:max-w-[480px]">
         <DialogHeader>
           <DialogTitle>Submit a Bug Report</DialogTitle>
           <DialogDescription>
@@ -71,7 +84,7 @@ export default function BugReportForm({ isOpen, onClose }: BugReportFormProps) {
               name="title"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Bug Title</FormLabel>
+                  <FormLabel>Issue Title</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g., Chat message not sending" {...field} />
                   </FormControl>
@@ -87,10 +100,64 @@ export default function BugReportForm({ isOpen, onClose }: BugReportFormProps) {
                   <FormLabel>Description</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Please describe the bug in detail..."
+                      placeholder="Please provide a detailed description of the bug..."
                       {...field}
                     />
                   </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="stepsToReproduce"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Steps to Reproduce</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="1. Go to '...'&#10;2. Click on '...'&#10;3. See error"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="severity"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Severity Level</FormLabel>
+                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select a severity level" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="low">Low</SelectItem>
+                      <SelectItem value="medium">Medium</SelectItem>
+                      <SelectItem value="high">High</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="attachment"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Attachment</FormLabel>
+                  <FormControl>
+                    <Input type="file" {...form.register("attachment")} />
+                  </FormControl>
+                  <FormDescription>
+                    Optionally attach a screenshot or log file.
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -99,7 +166,7 @@ export default function BugReportForm({ isOpen, onClose }: BugReportFormProps) {
               <Button type="button" variant="ghost" onClick={onClose}>
                 Cancel
               </Button>
-              <Button type="submit">Submit</Button>
+              <Button type="submit">Submit Report</Button>
             </DialogFooter>
           </form>
         </Form>

@@ -11,19 +11,14 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { LogOut, Settings, User as UserIcon, Bug, Lightbulb } from "lucide-react";
-import BugReportForm from "./bug-report-form";
-import FeatureRequestForm from "./feature-request-form";
+import { LogOut, Settings, User as UserIcon } from "lucide-react";
 
 export default function UserProfile() {
-  const [isBugReportOpen, setIsBugReportOpen] = React.useState(false);
-  const [isFeatureRequestOpen, setIsFeatureRequestOpen] = React.useState(false);
-
   return (
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" className="flex w-full items-center justify-start gap-2 p-2 text-left">
+          <Button variant="ghost" className="flex w-full items-center justify-start gap-2 p-2 text-left h-auto">
             <Avatar className="h-8 w-8">
                 <AvatarImage src={user.avatar} alt={user.name} />
                 <AvatarFallback>{user.name.charAt(0)}</AvatarFallback>
@@ -46,31 +41,12 @@ export default function UserProfile() {
             <span>Settings</span>
           </DropdownMenuItem>
           <DropdownMenuSeparator />
-          <DropdownMenuItem onClick={() => setIsBugReportOpen(true)}>
-            <Bug className="mr-2 h-4 w-4" />
-            <span>Bug Report</span>
-          </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => setIsFeatureRequestOpen(true)}>
-            <Lightbulb className="mr-2 h-4 w-4" />
-            <span>Feature Request</span>
-          </DropdownMenuItem>
-          <DropdownMenuSeparator />
           <DropdownMenuItem>
             <LogOut className="mr-2 h-4 w-4" />
             <span>Log out</span>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-
-      <BugReportForm 
-        isOpen={isBugReportOpen}
-        onClose={() => setIsBugReportOpen(false)}
-      />
-
-      <FeatureRequestForm
-        isOpen={isFeatureRequestOpen}
-        onClose={() => setIsFeatureRequestOpen(false)}
-      />
     </>
   );
 }
