@@ -16,25 +16,39 @@ const useTypewriter = (text: string | ReadableStream<string> | undefined, onDone
   const isStream = text instanceof ReadableStream;
 
   React.useEffect(() => {
-    if (!text) return;
+    if (!text) {
+        setDisplayedText("");
+        onDone();
+        return;
+    };
     
     if (isStream) {
       let currentText = "";
       const reader = text.getReader();
+      const decoder = new TextDecoder();
       let done = false;
 
       const read = async () => {
         while (!done) {
-          const { value, done: readerDone } = await reader.read();
-          done = readerDone;
-          if (value) {
-            currentText += new TextDecoder().decode(value);
-            setDisplayedText(currentText);
+          try {
+            const { value, done: readerDone } = await reader.read();
+            done = readerDone;
+            if (value) {
+              currentText += decoder.decode(value, { stream: true });
+              setDisplayedText(currentText);
+            }
+          } catch (error) {
+            console.error("Error reading stream:", error);
+            done = true;
           }
         }
         onDone();
       };
       read();
+      
+      return () => {
+        reader.cancel();
+      }
     } else {
       setDisplayedText(text);
       onDone();
@@ -122,7 +136,7 @@ const ChatMessage = ({ message, isLastMessage, isStreaming, onStreamingDone }: {
     <div
       className={cn(
         "group relative flex items-start gap-3 animate-fade-in py-4",
-        message.role === "user" && "justify-end"
+        message.role === "user" ? "justify-end" : ""
       )}
     >
       {message.role === "assistant" && (
@@ -177,10 +191,12 @@ export default function ChatMessages({ messages, isStreaming }: { messages: Mess
   const handleStreamingDone = React.useCallback(() => {
     setIsTyping(false);
   }, []);
+  
+  const contentOfLastMessage = messages.length > 0 ? messages[messages.length-1].content : '';
 
   React.useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages.length, isTyping, content]);
+  }, [messages.length, isTyping, contentOfLastMessage]);
   
   return (
     <ScrollArea className="flex-1 bg-background" ref={scrollAreaRef}>
