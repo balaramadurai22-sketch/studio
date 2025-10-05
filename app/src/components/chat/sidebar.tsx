@@ -80,10 +80,10 @@ export default function ChatSidebar({ chats, activeChatId, onNewChat, onSwitchCh
               {chats.map((chat) => (
                 <div key={chat.id} className="group relative flex items-center">
                   <Button
-                    variant={chat.id === activeChatId ? "ghost" : "ghost"}
+                    variant={chat.id === activeChatId ? "secondary" : "ghost"}
                     className={cn(
                         "w-full justify-start pr-8", 
-                        chat.id === activeChatId ? "bg-muted-foreground/20 font-bold" : "hover:bg-muted-foreground/10"
+                        chat.id === activeChatId && "font-bold"
                     )}
                     onClick={() => onSwitchChat(chat.id)}
                   >

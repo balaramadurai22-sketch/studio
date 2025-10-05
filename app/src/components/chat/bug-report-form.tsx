@@ -116,7 +116,9 @@ export default function BugReportForm({ isOpen, onClose }: BugReportFormProps) {
                   <FormLabel>Steps to Reproduce</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="1. Go to '...'&#10;2. Click on '...'&#10;3. See error"
+                      placeholder="1. Go to '...'
+2. Click on '...'
+3. See error"
                       {...field}
                     />
                   </FormControl>
