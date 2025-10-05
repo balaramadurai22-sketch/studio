@@ -16,25 +16,39 @@ const useTypewriter = (text: string | ReadableStream<string> | undefined, onDone
   const isStream = text instanceof ReadableStream;
 
   React.useEffect(() => {
-    if (!text) return;
+    if (!text) {
+        setDisplayedText("");
+        onDone();
+        return;
+    };
     
     if (isStream) {
       let currentText = "";
       const reader = text.getReader();
+      const decoder = new TextDecoder();
       let done = false;
 
       const read = async () => {
         while (!done) {
-          const { value, done: readerDone } = await reader.read();
-          done = readerDone;
-          if (value) {
-            currentText += new TextDecoder().decode(value);
-            setDisplayedText(currentText);
+          try {
+            const { value, done: readerDone } = await reader.read();
+            done = readerDone;
+            if (value) {
+              currentText += decoder.decode(value, { stream: true });
+              setDisplayedText(currentText);
+            }
+          } catch (error) {
+            console.error("Error reading stream:", error);
+            done = true;
           }
         }
         onDone();
       };
       read();
+      
+      return () => {
+        reader.cancel();
+      }
     } else {
       setDisplayedText(text);
       onDone();
@@ -57,7 +71,7 @@ const CodeBlock = ({
   onCopy: () => void;
 }) => {
   return (
-    <div className="relative my-4 rounded-lg bg-secondary/50 font-code">
+    <div className="relative my-4 rounded-lg bg-background font-code">
       <div className="flex items-center justify-between border-b px-4 py-2">
         <span className="text-xs text-muted-foreground">
           {lang || "code"}
@@ -122,7 +136,7 @@ const ChatMessage = ({ message, isLastMessage, isStreaming, onStreamingDone }: {
     <div
       className={cn(
         "group relative flex items-start gap-3 animate-fade-in py-4",
-        message.role === "user" && "justify-end"
+        message.role === "user" ? "justify-end" : ""
       )}
     >
       {message.role === "assistant" && (
@@ -137,10 +151,10 @@ const ChatMessage = ({ message, isLastMessage, isStreaming, onStreamingDone }: {
           "max-w-[80%] rounded-lg p-3",
           message.role === "user"
             ? "bg-primary text-primary-foreground"
-            : "bg-card border"
+            : "bg-secondary"
         )}
       >
-        <div className="prose prose-sm max-w-none prose-p:leading-normal">
+        <div className="prose prose-sm max-w-none prose-p:leading-normal prose-p:text-inherit prose-p:text-foreground/80">
           {parts.map((part, index) => {
             if (part.type === 'code') {
               return <CodeBlock key={index} lang={part.lang} code={part.content} onCopy={() => onCopy(part.content)} />
@@ -154,7 +168,7 @@ const ChatMessage = ({ message, isLastMessage, isStreaming, onStreamingDone }: {
       </div>
       {message.role === "user" && (
         <Avatar className="h-8 w-8 shrink-0">
-          <AvatarImage src={message.avatar} />
+          <AvatarImage src={user.avatar} />
           <AvatarFallback>
             <User />
           </AvatarFallback>
@@ -177,13 +191,15 @@ export default function ChatMessages({ messages, isStreaming }: { messages: Mess
   const handleStreamingDone = React.useCallback(() => {
     setIsTyping(false);
   }, []);
+  
+  const contentOfLastMessage = messages.length > 0 ? messages[messages.length-1].content : '';
 
   React.useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages.length, isTyping]);
+  }, [messages.length, isTyping, contentOfLastMessage]);
   
   return (
-    <ScrollArea className="flex-1" ref={scrollAreaRef}>
+    <ScrollArea className="flex-1 bg-background" ref={scrollAreaRef}>
       <div className="container py-8">
         <div className="mx-auto max-w-4xl">
           {messages.map((message: Message, index: number) => (
