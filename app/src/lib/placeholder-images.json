@@ -1,0 +1,172 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-chat-mockup",
+      "description": "Animated mockup of the chat interface",
+      "imageUrl": "https://images.unsplash.com/photo-1725798451557-fc60db3eb6a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjaGF0JTIwaW50ZXJmYWNlfGVufDB8fHx8MTc1OTUwNDEwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chat interface"
+    },
+    {
+      "id": "user-avatar",
+      "description": "User avatar for chat",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTk1MDY2MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "research-1",
+      "description": "Abstract AI visualization",
+      "imageUrl": "https://images.unsplash.com/photo-1680783954745-3249be59e527?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxBSSUyMGFic3RyYWN0fGVufDB8fHx8MTc1OTUwMzU3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI abstract"
+    },
+    {
+      "id": "research-2",
+      "description": "Neural network visualization",
+      "imageUrl": "https://images.unsplash.com/photo-1644325349124-d1756b79dd42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxuZXVyYWwlMjBuZXR3b3JrfGVufDB8fHx8MTc1OTQ3MTUyNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "neural network"
+    },
+    {
+      "id": "research-3",
+      "description": "AI-generated art",
+      "imageUrl": "https://images.unsplash.com/photo-1705249190144-19d7b6d28574?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxBSSUyMGFydHxlbnwwfHx8fDE3NTk0NTE1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI art"
+    },
+    {
+      "id": "research-4",
+      "description": "Data analysis graph",
+      "imageUrl": "https://images.unsplash.com/photo-1738082956257-06cde4444b1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXRhJTIwZ3JhcGh8ZW58MHx8fHwxNzU5NTE1NjQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data graph"
+    },
+    {
+      "id": "research-5",
+      "description": "Robotics and AI",
+      "imageUrl": "https://images.unsplash.com/photo-1699602048487-f52024260d3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxyb2JvdGljcyUyMEFJfGVufDB8fHx8MTc1OTUxNDA2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "robotics AI"
+    },
+    {
+      "id": "research-6",
+      "description": "AI in healthcare",
+      "imageUrl": "https://images.unsplash.com/photo-1631507623121-eaaba8d4e7dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxBSSUyMGhlYWx0aGNhcmV8ZW58MHx8fHwxNzU5NTE3MTA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI healthcare"
+    },
+    {
+      "id": "research-7",
+      "description": "Quantum computing concept",
+      "imageUrl": "https://images.unsplash.com/photo-1609151376730-f246ec0b99e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxxdWFudHVtJTIwY29tcHV0aW5nfGVufDB8fHx8MTc1OTQ2NzY2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "quantum computing"
+    },
+    {
+      "id": "research-8",
+      "description": "AI and ethics concept",
+      "imageUrl": "https://images.unsplash.com/photo-1717501218424-b4724c7882bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxBSSUyMGV0aGljc3xlbnwwfHx8fDE3NTk1Njk2NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI ethics"
+    },
+    {
+      "id": "founder-bala",
+      "description": "Symbol for Bala Ramadurai, the founder.",
+      "imageUrl": "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxsaW9ufGVufDB8fHx8MTc1OTU3MzEwNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lion"
+    },
+    {
+      "id": "team-parthiban",
+      "description": "Symbol for Parthiban.",
+      "imageUrl": "https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0aWdlcnxlbnwwfHx8fDE3NTk1NzMxMDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tiger"
+    },
+    {
+      "id": "team-arun",
+      "description": "Symbol for Arun Kumar.",
+      "imageUrl": "https://images.unsplash.com/photo-1624958723474-05d32b99005f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2hlZXRhaHxlbnwwfHx8fDE3NTk1NzMxMDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cheetah"
+    },
+    {
+      "id": "team-vijay",
+      "description": "Symbol for Vijay K.",
+      "imageUrl": "https://images.unsplash.com/photo-1607350999170-b893fef057ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b2xmfGVufDB8fHx8MTc1OTU3MzEwNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wolf"
+    },
+    {
+      "id": "team-dharshan",
+      "description": "Symbol for Dharshan.",
+      "imageUrl": "https://images.unsplash.com/photo-1593946460607-d1570da6268f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxiZWFyfGVufDB8fHx8MTc1OTU3MzEwNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bear"
+    },
+    {
+      "id": "team-giriraja",
+      "description": "Symbol for Giriraja.",
+      "imageUrl": "https://images.unsplash.com/photo-1541793525933-5a16ccd1e0d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyaGlub3xlbnwwfHx8fDE3NTk1NjA2Mjh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rhino"
+    },
+    {
+      "id": "team-sarathi",
+      "description": "Symbol for Sarathi.",
+      "imageUrl": "https://images.unsplash.com/photo-1596465467444-b6e43222e5f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxlYWdsZXxlbnwwfHx8fDE3NTk1NzMxMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eagle"
+    },
+    {
+      "id": "action-1",
+      "description": "Abstract visualization of AI data processing",
+      "imageUrl": "https://images.unsplash.com/photo-1545987796-200677ee1011?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuZXVyYWwlMjBuZXR3b3JrfGVufDB8fHx8MTc1OTQ3MTUyNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "neural network"
+    },
+    {
+      "id": "action-2",
+      "description": "AI generating art in black and white",
+      "imageUrl": "https://images.unsplash.com/photo-1572566017925-681b69f9aafa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxBSSUyMGdlb21ldHJpY3xlbnwwfHx8fDE3NTk1NzMxMDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI geometric"
+    },
+    {
+      "id": "action-3",
+      "description": "Smart automation or robotics concept",
+      "imageUrl": "https://images.unsplash.com/photo-1728724654223-ae890fc31f1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxyb2JvdGljJTIwaGFuZHN8ZW58MHx8fHwxNzU5NTczMTA0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "robotic hands"
+    },
+    {
+      "id": "impact-1",
+      "description": "AI in healthcare diagnostics",
+      "imageUrl": "https://images.unsplash.com/photo-1746842421936-461e16dd8238?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxBSSUyMGhlYWx0aGNhcmV8ZW58MHx8fHwxNzU5NTE3MTA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI healthcare"
+    },
+    {
+      "id": "impact-2",
+      "description": "AI for climate change modeling",
+      "imageUrl": "https://images.unsplash.com/photo-1551385917-889e48f92c21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnbG9iZSUyMEFJfGVufDB8fHx8MTc1OTU3MzEwNHww&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "globe AI"
+    },
+    {
+      "id": "blog-1",
+      "description": "Black and white sketch representing prompt engineering",
+      "imageUrl": "https://images.unsplash.com/photo-1582195224076-5797361b3692?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "abstract sketch"
+    },
+    {
+      "id": "blog-2",
+      "description": "Black and white sketch of a DNA strand",
+      "imageUrl": "https://images.unsplash.com/photo-1614926120199-3b5643440751?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "dna sketch"
+    },
+    {
+      "id": "blog-3",
+      "description": "Black and white sketch of balanced scales for ethics",
+      "imageUrl": "https://images.unsplash.com/photo-1555685812-4b94d83763f5?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "scales sketch"
+    },
+    {
+      "id": "blog-4",
+      "description": "Black and white sketch of paint brushes for generative art",
+      "imageUrl": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1945&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "art sketch"
+    },
+    {
+      "id": "blog-5",
+      "description": "Black and white sketch of a forest canopy for climate change",
+      "imageUrl": "https://images.unsplash.com/photo-1542886799-c6c3fe08287c?q=80&w=1885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "forest sketch"
+    },
+    {
+      "id": "blog-6",
+      "description": "Black and white sketch of a city skyline for future of work",
+      "imageUrl": "https://images.unsplash.com/photo-1522093024179-8b07545d454a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "city sketch"
+    }
+  ]
+}
